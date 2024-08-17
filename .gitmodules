@@ -1,0 +1,9 @@
+[submodule "convolutional_benchmarks_vnncomp"]
+	path = convolutional_benchmarks_vnncomp
+	url = https://github.com/AndyVale/convolutional_benchmarks_vnncomp.git
+[submodule "fullyconnected_benchmarks_vnncomp"]
+	path = fullyconnected_benchmarks_vnncomp
+	url = https://github.com/AndyVale/fullyconnected_benchmarks_vnncomp.git
+[submodule "residual_benchmarks_vnncomp"]
+	path = residual_benchmarks_vnncomp
+	url = https://github.com/AndyVale/residual_benchmarks_vnncomp.git
