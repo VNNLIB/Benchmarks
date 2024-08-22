@@ -1,0 +1,459 @@
+architecture,benchmark,onnx,node_types,n_params
+convolutional,cgan_2023,cGAN_imgSz32_nCh_1.onnx,"['BatchNormalization', 'Constant', 'Conv', 'ConvTranspose', 'Gemm', 'Relu', 'Reshape']",529538
+convolutional,cgan_2023,cGAN_imgSz32_nCh_1_transposedConvPadding_1.onnx,"['BatchNormalization', 'Constant', 'Conv', 'ConvTranspose', 'Gemm', 'Relu', 'Reshape']",538754
+convolutional,cgan_2023,cGAN_imgSz32_nCh_3.onnx,"['BatchNormalization', 'Constant', 'Conv', 'ConvTranspose', 'Gemm', 'Relu', 'Reshape']",530404
+convolutional,cgan_2023,cGAN_imgSz32_nCh_3_nonlinear_activations.onnx,"['BatchNormalization', 'Conv', 'ConvTranspose', 'Gemm', 'Relu', 'Reshape', 'Sigmoid', 'Tanh']",530410
+convolutional,cgan_2023,cGAN_imgSz32_nCh_3_upsample.onnx,"['BatchNormalization', 'Constant', 'Conv', 'Gemm', 'Relu', 'Reshape', 'Sigmoid', 'Upsample']",352368
+convolutional,cgan_2023,cGAN_imgSz64_nCh_1.onnx,"['BatchNormalization', 'Conv', 'ConvTranspose', 'Gemm', 'Relu', 'Reshape']",685768
+convolutional,cgan_2023,cGAN_imgSz64_nCh_3.onnx,"['BatchNormalization', 'Conv', 'ConvTranspose', 'Gemm', 'Relu', 'Reshape']",686346
+convolutional,cifar2020,cifar10_2_255_simplified.onnx,"['Conv', 'Flatten', 'Gemm', 'Relu']",2133736
+convolutional,cifar2020,cifar10_8_255_simplified.onnx,"['Conv', 'Flatten', 'Gemm', 'Relu']",2118856
+convolutional,cifar2020,convBigRELU__PGD.onnx,"['Constant', 'Conv', 'Div', 'Flatten', 'Gemm', 'Relu', 'Sub']",2466858
+convolutional,cifar_biasfield,cifar_base.onnx,"['Conv', 'Flatten', 'Relu']",311690
+convolutional,cifar_biasfield,cifar_bias_field_0.onnx,"['Constant', 'Conv', 'Flatten', 'Gemm', 'Relu', 'Reshape']",363914
+convolutional,cifar_biasfield,cifar_bias_field_1.onnx,"['Constant', 'Conv', 'Flatten', 'Gemm', 'Relu', 'Reshape']",363914
+convolutional,cifar_biasfield,cifar_bias_field_10.onnx,"['Constant', 'Conv', 'Flatten', 'Gemm', 'Relu', 'Reshape']",363914
+convolutional,cifar_biasfield,cifar_bias_field_11.onnx,"['Constant', 'Conv', 'Flatten', 'Gemm', 'Relu', 'Reshape']",363914
+convolutional,cifar_biasfield,cifar_bias_field_12.onnx,"['Constant', 'Conv', 'Flatten', 'Gemm', 'Relu', 'Reshape']",363914
+convolutional,cifar_biasfield,cifar_bias_field_13.onnx,"['Constant', 'Conv', 'Flatten', 'Gemm', 'Relu', 'Reshape']",363914
+convolutional,cifar_biasfield,cifar_bias_field_14.onnx,"['Constant', 'Conv', 'Flatten', 'Gemm', 'Relu', 'Reshape']",363914
+convolutional,cifar_biasfield,cifar_bias_field_15.onnx,"['Constant', 'Conv', 'Flatten', 'Gemm', 'Relu', 'Reshape']",363914
+convolutional,cifar_biasfield,cifar_bias_field_16.onnx,"['Constant', 'Conv', 'Flatten', 'Gemm', 'Relu', 'Reshape']",363914
+convolutional,cifar_biasfield,cifar_bias_field_17.onnx,"['Constant', 'Conv', 'Flatten', 'Gemm', 'Relu', 'Reshape']",363914
+convolutional,cifar_biasfield,cifar_bias_field_18.onnx,"['Constant', 'Conv', 'Flatten', 'Gemm', 'Relu', 'Reshape']",363914
+convolutional,cifar_biasfield,cifar_bias_field_19.onnx,"['Constant', 'Conv', 'Flatten', 'Gemm', 'Relu', 'Reshape']",363914
+convolutional,cifar_biasfield,cifar_bias_field_2.onnx,"['Constant', 'Conv', 'Flatten', 'Gemm', 'Relu', 'Reshape']",363914
+convolutional,cifar_biasfield,cifar_bias_field_20.onnx,"['Constant', 'Conv', 'Flatten', 'Gemm', 'Relu', 'Reshape']",363914
+convolutional,cifar_biasfield,cifar_bias_field_21.onnx,"['Constant', 'Conv', 'Flatten', 'Gemm', 'Relu', 'Reshape']",363914
+convolutional,cifar_biasfield,cifar_bias_field_22.onnx,"['Constant', 'Conv', 'Flatten', 'Gemm', 'Relu', 'Reshape']",363914
+convolutional,cifar_biasfield,cifar_bias_field_23.onnx,"['Constant', 'Conv', 'Flatten', 'Gemm', 'Relu', 'Reshape']",363914
+convolutional,cifar_biasfield,cifar_bias_field_24.onnx,"['Constant', 'Conv', 'Flatten', 'Gemm', 'Relu', 'Reshape']",363914
+convolutional,cifar_biasfield,cifar_bias_field_25.onnx,"['Constant', 'Conv', 'Flatten', 'Gemm', 'Relu', 'Reshape']",363914
+convolutional,cifar_biasfield,cifar_bias_field_26.onnx,"['Constant', 'Conv', 'Flatten', 'Gemm', 'Relu', 'Reshape']",363914
+convolutional,cifar_biasfield,cifar_bias_field_27.onnx,"['Constant', 'Conv', 'Flatten', 'Gemm', 'Relu', 'Reshape']",363914
+convolutional,cifar_biasfield,cifar_bias_field_28.onnx,"['Constant', 'Conv', 'Flatten', 'Gemm', 'Relu', 'Reshape']",363914
+convolutional,cifar_biasfield,cifar_bias_field_29.onnx,"['Constant', 'Conv', 'Flatten', 'Gemm', 'Relu', 'Reshape']",363914
+convolutional,cifar_biasfield,cifar_bias_field_3.onnx,"['Constant', 'Conv', 'Flatten', 'Gemm', 'Relu', 'Reshape']",363914
+convolutional,cifar_biasfield,cifar_bias_field_30.onnx,"['Constant', 'Conv', 'Flatten', 'Gemm', 'Relu', 'Reshape']",363914
+convolutional,cifar_biasfield,cifar_bias_field_31.onnx,"['Constant', 'Conv', 'Flatten', 'Gemm', 'Relu', 'Reshape']",363914
+convolutional,cifar_biasfield,cifar_bias_field_32.onnx,"['Constant', 'Conv', 'Flatten', 'Gemm', 'Relu', 'Reshape']",363914
+convolutional,cifar_biasfield,cifar_bias_field_33.onnx,"['Constant', 'Conv', 'Flatten', 'Gemm', 'Relu', 'Reshape']",363914
+convolutional,cifar_biasfield,cifar_bias_field_34.onnx,"['Constant', 'Conv', 'Flatten', 'Gemm', 'Relu', 'Reshape']",363914
+convolutional,cifar_biasfield,cifar_bias_field_35.onnx,"['Constant', 'Conv', 'Flatten', 'Gemm', 'Relu', 'Reshape']",363914
+convolutional,cifar_biasfield,cifar_bias_field_36.onnx,"['Constant', 'Conv', 'Flatten', 'Gemm', 'Relu', 'Reshape']",363914
+convolutional,cifar_biasfield,cifar_bias_field_37.onnx,"['Constant', 'Conv', 'Flatten', 'Gemm', 'Relu', 'Reshape']",363914
+convolutional,cifar_biasfield,cifar_bias_field_38.onnx,"['Constant', 'Conv', 'Flatten', 'Gemm', 'Relu', 'Reshape']",363914
+convolutional,cifar_biasfield,cifar_bias_field_39.onnx,"['Constant', 'Conv', 'Flatten', 'Gemm', 'Relu', 'Reshape']",363914
+convolutional,cifar_biasfield,cifar_bias_field_4.onnx,"['Constant', 'Conv', 'Flatten', 'Gemm', 'Relu', 'Reshape']",363914
+convolutional,cifar_biasfield,cifar_bias_field_40.onnx,"['Constant', 'Conv', 'Flatten', 'Gemm', 'Relu', 'Reshape']",363914
+convolutional,cifar_biasfield,cifar_bias_field_41.onnx,"['Constant', 'Conv', 'Flatten', 'Gemm', 'Relu', 'Reshape']",363914
+convolutional,cifar_biasfield,cifar_bias_field_42.onnx,"['Constant', 'Conv', 'Flatten', 'Gemm', 'Relu', 'Reshape']",363914
+convolutional,cifar_biasfield,cifar_bias_field_43.onnx,"['Constant', 'Conv', 'Flatten', 'Gemm', 'Relu', 'Reshape']",363914
+convolutional,cifar_biasfield,cifar_bias_field_44.onnx,"['Constant', 'Conv', 'Flatten', 'Gemm', 'Relu', 'Reshape']",363914
+convolutional,cifar_biasfield,cifar_bias_field_45.onnx,"['Constant', 'Conv', 'Flatten', 'Gemm', 'Relu', 'Reshape']",363914
+convolutional,cifar_biasfield,cifar_bias_field_46.onnx,"['Constant', 'Conv', 'Flatten', 'Gemm', 'Relu', 'Reshape']",363914
+convolutional,cifar_biasfield,cifar_bias_field_47.onnx,"['Constant', 'Conv', 'Flatten', 'Gemm', 'Relu', 'Reshape']",363914
+convolutional,cifar_biasfield,cifar_bias_field_48.onnx,"['Constant', 'Conv', 'Flatten', 'Gemm', 'Relu', 'Reshape']",363914
+convolutional,cifar_biasfield,cifar_bias_field_49.onnx,"['Constant', 'Conv', 'Flatten', 'Gemm', 'Relu', 'Reshape']",363914
+convolutional,cifar_biasfield,cifar_bias_field_5.onnx,"['Constant', 'Conv', 'Flatten', 'Gemm', 'Relu', 'Reshape']",363914
+convolutional,cifar_biasfield,cifar_bias_field_50.onnx,"['Constant', 'Conv', 'Flatten', 'Gemm', 'Relu', 'Reshape']",363914
+convolutional,cifar_biasfield,cifar_bias_field_51.onnx,"['Constant', 'Conv', 'Flatten', 'Gemm', 'Relu', 'Reshape']",363914
+convolutional,cifar_biasfield,cifar_bias_field_52.onnx,"['Constant', 'Conv', 'Flatten', 'Gemm', 'Relu', 'Reshape']",363914
+convolutional,cifar_biasfield,cifar_bias_field_53.onnx,"['Constant', 'Conv', 'Flatten', 'Gemm', 'Relu', 'Reshape']",363914
+convolutional,cifar_biasfield,cifar_bias_field_54.onnx,"['Constant', 'Conv', 'Flatten', 'Gemm', 'Relu', 'Reshape']",363914
+convolutional,cifar_biasfield,cifar_bias_field_55.onnx,"['Constant', 'Conv', 'Flatten', 'Gemm', 'Relu', 'Reshape']",363914
+convolutional,cifar_biasfield,cifar_bias_field_56.onnx,"['Constant', 'Conv', 'Flatten', 'Gemm', 'Relu', 'Reshape']",363914
+convolutional,cifar_biasfield,cifar_bias_field_57.onnx,"['Constant', 'Conv', 'Flatten', 'Gemm', 'Relu', 'Reshape']",363914
+convolutional,cifar_biasfield,cifar_bias_field_58.onnx,"['Constant', 'Conv', 'Flatten', 'Gemm', 'Relu', 'Reshape']",363914
+convolutional,cifar_biasfield,cifar_bias_field_59.onnx,"['Constant', 'Conv', 'Flatten', 'Gemm', 'Relu', 'Reshape']",363914
+convolutional,cifar_biasfield,cifar_bias_field_6.onnx,"['Constant', 'Conv', 'Flatten', 'Gemm', 'Relu', 'Reshape']",363914
+convolutional,cifar_biasfield,cifar_bias_field_60.onnx,"['Constant', 'Conv', 'Flatten', 'Gemm', 'Relu', 'Reshape']",363914
+convolutional,cifar_biasfield,cifar_bias_field_61.onnx,"['Constant', 'Conv', 'Flatten', 'Gemm', 'Relu', 'Reshape']",363914
+convolutional,cifar_biasfield,cifar_bias_field_62.onnx,"['Constant', 'Conv', 'Flatten', 'Gemm', 'Relu', 'Reshape']",363914
+convolutional,cifar_biasfield,cifar_bias_field_63.onnx,"['Constant', 'Conv', 'Flatten', 'Gemm', 'Relu', 'Reshape']",363914
+convolutional,cifar_biasfield,cifar_bias_field_64.onnx,"['Constant', 'Conv', 'Flatten', 'Gemm', 'Relu', 'Reshape']",363914
+convolutional,cifar_biasfield,cifar_bias_field_65.onnx,"['Constant', 'Conv', 'Flatten', 'Gemm', 'Relu', 'Reshape']",363914
+convolutional,cifar_biasfield,cifar_bias_field_66.onnx,"['Constant', 'Conv', 'Flatten', 'Gemm', 'Relu', 'Reshape']",363914
+convolutional,cifar_biasfield,cifar_bias_field_67.onnx,"['Constant', 'Conv', 'Flatten', 'Gemm', 'Relu', 'Reshape']",363914
+convolutional,cifar_biasfield,cifar_bias_field_68.onnx,"['Constant', 'Conv', 'Flatten', 'Gemm', 'Relu', 'Reshape']",363914
+convolutional,cifar_biasfield,cifar_bias_field_69.onnx,"['Constant', 'Conv', 'Flatten', 'Gemm', 'Relu', 'Reshape']",363914
+convolutional,cifar_biasfield,cifar_bias_field_7.onnx,"['Constant', 'Conv', 'Flatten', 'Gemm', 'Relu', 'Reshape']",363914
+convolutional,cifar_biasfield,cifar_bias_field_70.onnx,"['Constant', 'Conv', 'Flatten', 'Gemm', 'Relu', 'Reshape']",363914
+convolutional,cifar_biasfield,cifar_bias_field_71.onnx,"['Constant', 'Conv', 'Flatten', 'Gemm', 'Relu', 'Reshape']",363914
+convolutional,cifar_biasfield,cifar_bias_field_8.onnx,"['Constant', 'Conv', 'Flatten', 'Gemm', 'Relu', 'Reshape']",363914
+convolutional,cifar_biasfield,cifar_bias_field_9.onnx,"['Constant', 'Conv', 'Flatten', 'Gemm', 'Relu', 'Reshape']",363914
+convolutional,collins_rul_cnn_2023,NN_rul_full_window_20.onnx,"['Conv', 'Dropout', 'Flatten', 'Relu']",62446
+convolutional,collins_rul_cnn_2023,NN_rul_full_window_40.onnx,"['Conv', 'Dropout', 'Flatten', 'Relu']",262446
+convolutional,collins_rul_cnn_2023,NN_rul_small_window_20.onnx,"['Conv', 'Dropout', 'Flatten', 'Relu']",60826
+convolutional,metaroom_2023,4cnn_ry_0_0_no_custom_OP.onnx,"['Constant', 'Conv', 'Gemm', 'Relu', 'Reshape']",466604
+convolutional,metaroom_2023,4cnn_ry_102_17_no_custom_OP.onnx,"['Constant', 'Conv', 'Gemm', 'Relu', 'Reshape']",466604
+convolutional,metaroom_2023,4cnn_ry_111_18_no_custom_OP.onnx,"['Constant', 'Conv', 'Gemm', 'Relu', 'Reshape']",466604
+convolutional,metaroom_2023,4cnn_ry_117_19_no_custom_OP.onnx,"['Constant', 'Conv', 'Gemm', 'Relu', 'Reshape']",466604
+convolutional,metaroom_2023,4cnn_ry_15_2_no_custom_OP.onnx,"['Constant', 'Conv', 'Gemm', 'Relu', 'Reshape']",466604
+convolutional,metaroom_2023,4cnn_ry_19_3_no_custom_OP.onnx,"['Constant', 'Conv', 'Gemm', 'Relu', 'Reshape']",466604
+convolutional,metaroom_2023,4cnn_ry_1_0_no_custom_OP.onnx,"['Constant', 'Conv', 'Gemm', 'Relu', 'Reshape']",466604
+convolutional,metaroom_2023,4cnn_ry_20_3_no_custom_OP.onnx,"['Constant', 'Conv', 'Gemm', 'Relu', 'Reshape']",466604
+convolutional,metaroom_2023,4cnn_ry_2_0_no_custom_OP.onnx,"['Constant', 'Conv', 'Gemm', 'Relu', 'Reshape']",466604
+convolutional,metaroom_2023,4cnn_ry_30_5_no_custom_OP.onnx,"['Constant', 'Conv', 'Gemm', 'Relu', 'Reshape']",466604
+convolutional,metaroom_2023,4cnn_ry_31_5_no_custom_OP.onnx,"['Constant', 'Conv', 'Gemm', 'Relu', 'Reshape']",466604
+convolutional,metaroom_2023,4cnn_ry_33_5_no_custom_OP.onnx,"['Constant', 'Conv', 'Gemm', 'Relu', 'Reshape']",466604
+convolutional,metaroom_2023,4cnn_ry_34_5_no_custom_OP.onnx,"['Constant', 'Conv', 'Gemm', 'Relu', 'Reshape']",466604
+convolutional,metaroom_2023,4cnn_ry_36_6_no_custom_OP.onnx,"['Constant', 'Conv', 'Gemm', 'Relu', 'Reshape']",466604
+convolutional,metaroom_2023,4cnn_ry_37_6_no_custom_OP.onnx,"['Constant', 'Conv', 'Gemm', 'Relu', 'Reshape']",466604
+convolutional,metaroom_2023,4cnn_ry_38_6_no_custom_OP.onnx,"['Constant', 'Conv', 'Gemm', 'Relu', 'Reshape']",466604
+convolutional,metaroom_2023,4cnn_ry_39_6_no_custom_OP.onnx,"['Constant', 'Conv', 'Gemm', 'Relu', 'Reshape']",466604
+convolutional,metaroom_2023,4cnn_ry_3_0_no_custom_OP.onnx,"['Constant', 'Conv', 'Gemm', 'Relu', 'Reshape']",466604
+convolutional,metaroom_2023,4cnn_ry_40_6_no_custom_OP.onnx,"['Constant', 'Conv', 'Gemm', 'Relu', 'Reshape']",466604
+convolutional,metaroom_2023,4cnn_ry_41_6_no_custom_OP.onnx,"['Constant', 'Conv', 'Gemm', 'Relu', 'Reshape']",466604
+convolutional,metaroom_2023,4cnn_ry_42_7_no_custom_OP.onnx,"['Constant', 'Conv', 'Gemm', 'Relu', 'Reshape']",466604
+convolutional,metaroom_2023,4cnn_ry_44_7_no_custom_OP.onnx,"['Constant', 'Conv', 'Gemm', 'Relu', 'Reshape']",466604
+convolutional,metaroom_2023,4cnn_ry_45_7_no_custom_OP.onnx,"['Constant', 'Conv', 'Gemm', 'Relu', 'Reshape']",466604
+convolutional,metaroom_2023,4cnn_ry_47_7_no_custom_OP.onnx,"['Constant', 'Conv', 'Gemm', 'Relu', 'Reshape']",466604
+convolutional,metaroom_2023,4cnn_ry_48_8_no_custom_OP.onnx,"['Constant', 'Conv', 'Gemm', 'Relu', 'Reshape']",466604
+convolutional,metaroom_2023,4cnn_ry_52_8_no_custom_OP.onnx,"['Constant', 'Conv', 'Gemm', 'Relu', 'Reshape']",466604
+convolutional,metaroom_2023,4cnn_ry_55_9_no_custom_OP.onnx,"['Constant', 'Conv', 'Gemm', 'Relu', 'Reshape']",466604
+convolutional,metaroom_2023,4cnn_ry_56_9_no_custom_OP.onnx,"['Constant', 'Conv', 'Gemm', 'Relu', 'Reshape']",466604
+convolutional,metaroom_2023,4cnn_ry_57_9_no_custom_OP.onnx,"['Constant', 'Conv', 'Gemm', 'Relu', 'Reshape']",466604
+convolutional,metaroom_2023,4cnn_ry_58_9_no_custom_OP.onnx,"['Constant', 'Conv', 'Gemm', 'Relu', 'Reshape']",466604
+convolutional,metaroom_2023,4cnn_ry_5_0_no_custom_OP.onnx,"['Constant', 'Conv', 'Gemm', 'Relu', 'Reshape']",466604
+convolutional,metaroom_2023,4cnn_ry_61_10_no_custom_OP.onnx,"['Constant', 'Conv', 'Gemm', 'Relu', 'Reshape']",466604
+convolutional,metaroom_2023,4cnn_ry_64_10_no_custom_OP.onnx,"['Constant', 'Conv', 'Gemm', 'Relu', 'Reshape']",466604
+convolutional,metaroom_2023,4cnn_ry_65_10_no_custom_OP.onnx,"['Constant', 'Conv', 'Gemm', 'Relu', 'Reshape']",466604
+convolutional,metaroom_2023,4cnn_ry_68_11_no_custom_OP.onnx,"['Constant', 'Conv', 'Gemm', 'Relu', 'Reshape']",466604
+convolutional,metaroom_2023,4cnn_ry_6_1_no_custom_OP.onnx,"['Constant', 'Conv', 'Gemm', 'Relu', 'Reshape']",466604
+convolutional,metaroom_2023,4cnn_ry_70_11_no_custom_OP.onnx,"['Constant', 'Conv', 'Gemm', 'Relu', 'Reshape']",466604
+convolutional,metaroom_2023,4cnn_ry_71_11_no_custom_OP.onnx,"['Constant', 'Conv', 'Gemm', 'Relu', 'Reshape']",466604
+convolutional,metaroom_2023,4cnn_ry_79_13_no_custom_OP.onnx,"['Constant', 'Conv', 'Gemm', 'Relu', 'Reshape']",466604
+convolutional,metaroom_2023,4cnn_ry_7_1_no_custom_OP.onnx,"['Constant', 'Conv', 'Gemm', 'Relu', 'Reshape']",466604
+convolutional,metaroom_2023,4cnn_ry_82_13_no_custom_OP.onnx,"['Constant', 'Conv', 'Gemm', 'Relu', 'Reshape']",466604
+convolutional,metaroom_2023,4cnn_ry_91_15_no_custom_OP.onnx,"['Constant', 'Conv', 'Gemm', 'Relu', 'Reshape']",466604
+convolutional,metaroom_2023,4cnn_ry_94_15_no_custom_OP.onnx,"['Constant', 'Conv', 'Gemm', 'Relu', 'Reshape']",466604
+convolutional,metaroom_2023,4cnn_ry_99_16_no_custom_OP.onnx,"['Constant', 'Conv', 'Gemm', 'Relu', 'Reshape']",466604
+convolutional,metaroom_2023,4cnn_ry_9_1_no_custom_OP.onnx,"['Constant', 'Conv', 'Gemm', 'Relu', 'Reshape']",466604
+convolutional,metaroom_2023,4cnn_tz_0_0_no_custom_OP.onnx,"['Constant', 'Conv', 'Gemm', 'Relu', 'Reshape']",466604
+convolutional,metaroom_2023,4cnn_tz_102_17_no_custom_OP.onnx,"['Constant', 'Conv', 'Gemm', 'Relu', 'Reshape']",466604
+convolutional,metaroom_2023,4cnn_tz_103_17_no_custom_OP.onnx,"['Constant', 'Conv', 'Gemm', 'Relu', 'Reshape']",466604
+convolutional,metaroom_2023,4cnn_tz_111_18_no_custom_OP.onnx,"['Constant', 'Conv', 'Gemm', 'Relu', 'Reshape']",466604
+convolutional,metaroom_2023,4cnn_tz_117_19_no_custom_OP.onnx,"['Constant', 'Conv', 'Gemm', 'Relu', 'Reshape']",466604
+convolutional,metaroom_2023,4cnn_tz_15_2_no_custom_OP.onnx,"['Constant', 'Conv', 'Gemm', 'Relu', 'Reshape']",466604
+convolutional,metaroom_2023,4cnn_tz_19_3_no_custom_OP.onnx,"['Constant', 'Conv', 'Gemm', 'Relu', 'Reshape']",466604
+convolutional,metaroom_2023,4cnn_tz_1_0_no_custom_OP.onnx,"['Constant', 'Conv', 'Gemm', 'Relu', 'Reshape']",466604
+convolutional,metaroom_2023,4cnn_tz_20_3_no_custom_OP.onnx,"['Constant', 'Conv', 'Gemm', 'Relu', 'Reshape']",466604
+convolutional,metaroom_2023,4cnn_tz_28_4_no_custom_OP.onnx,"['Constant', 'Conv', 'Gemm', 'Relu', 'Reshape']",466604
+convolutional,metaroom_2023,4cnn_tz_2_0_no_custom_OP.onnx,"['Constant', 'Conv', 'Gemm', 'Relu', 'Reshape']",466604
+convolutional,metaroom_2023,4cnn_tz_30_5_no_custom_OP.onnx,"['Constant', 'Conv', 'Gemm', 'Relu', 'Reshape']",466604
+convolutional,metaroom_2023,4cnn_tz_31_5_no_custom_OP.onnx,"['Constant', 'Conv', 'Gemm', 'Relu', 'Reshape']",466604
+convolutional,metaroom_2023,4cnn_tz_33_5_no_custom_OP.onnx,"['Constant', 'Conv', 'Gemm', 'Relu', 'Reshape']",466604
+convolutional,metaroom_2023,4cnn_tz_34_5_no_custom_OP.onnx,"['Constant', 'Conv', 'Gemm', 'Relu', 'Reshape']",466604
+convolutional,metaroom_2023,4cnn_tz_36_6_no_custom_OP.onnx,"['Constant', 'Conv', 'Gemm', 'Relu', 'Reshape']",466604
+convolutional,metaroom_2023,4cnn_tz_37_6_no_custom_OP.onnx,"['Constant', 'Conv', 'Gemm', 'Relu', 'Reshape']",466604
+convolutional,metaroom_2023,4cnn_tz_38_6_no_custom_OP.onnx,"['Constant', 'Conv', 'Gemm', 'Relu', 'Reshape']",466604
+convolutional,metaroom_2023,4cnn_tz_39_6_no_custom_OP.onnx,"['Constant', 'Conv', 'Gemm', 'Relu', 'Reshape']",466604
+convolutional,metaroom_2023,4cnn_tz_3_0_no_custom_OP.onnx,"['Constant', 'Conv', 'Gemm', 'Relu', 'Reshape']",466604
+convolutional,metaroom_2023,4cnn_tz_40_6_no_custom_OP.onnx,"['Constant', 'Conv', 'Gemm', 'Relu', 'Reshape']",466604
+convolutional,metaroom_2023,4cnn_tz_41_6_no_custom_OP.onnx,"['Constant', 'Conv', 'Gemm', 'Relu', 'Reshape']",466604
+convolutional,metaroom_2023,4cnn_tz_42_7_no_custom_OP.onnx,"['Constant', 'Conv', 'Gemm', 'Relu', 'Reshape']",466604
+convolutional,metaroom_2023,4cnn_tz_44_7_no_custom_OP.onnx,"['Constant', 'Conv', 'Gemm', 'Relu', 'Reshape']",466604
+convolutional,metaroom_2023,4cnn_tz_47_7_no_custom_OP.onnx,"['Constant', 'Conv', 'Gemm', 'Relu', 'Reshape']",466604
+convolutional,metaroom_2023,4cnn_tz_48_8_no_custom_OP.onnx,"['Constant', 'Conv', 'Gemm', 'Relu', 'Reshape']",466604
+convolutional,metaroom_2023,4cnn_tz_4_0_no_custom_OP.onnx,"['Constant', 'Conv', 'Gemm', 'Relu', 'Reshape']",466604
+convolutional,metaroom_2023,4cnn_tz_52_8_no_custom_OP.onnx,"['Constant', 'Conv', 'Gemm', 'Relu', 'Reshape']",466604
+convolutional,metaroom_2023,4cnn_tz_55_9_no_custom_OP.onnx,"['Constant', 'Conv', 'Gemm', 'Relu', 'Reshape']",466604
+convolutional,metaroom_2023,4cnn_tz_57_9_no_custom_OP.onnx,"['Constant', 'Conv', 'Gemm', 'Relu', 'Reshape']",466604
+convolutional,metaroom_2023,4cnn_tz_5_0_no_custom_OP.onnx,"['Constant', 'Conv', 'Gemm', 'Relu', 'Reshape']",466604
+convolutional,metaroom_2023,4cnn_tz_61_10_no_custom_OP.onnx,"['Constant', 'Conv', 'Gemm', 'Relu', 'Reshape']",466604
+convolutional,metaroom_2023,4cnn_tz_62_10_no_custom_OP.onnx,"['Constant', 'Conv', 'Gemm', 'Relu', 'Reshape']",466604
+convolutional,metaroom_2023,4cnn_tz_64_10_no_custom_OP.onnx,"['Constant', 'Conv', 'Gemm', 'Relu', 'Reshape']",466604
+convolutional,metaroom_2023,4cnn_tz_65_10_no_custom_OP.onnx,"['Constant', 'Conv', 'Gemm', 'Relu', 'Reshape']",466604
+convolutional,metaroom_2023,4cnn_tz_68_11_no_custom_OP.onnx,"['Constant', 'Conv', 'Gemm', 'Relu', 'Reshape']",466604
+convolutional,metaroom_2023,4cnn_tz_6_1_no_custom_OP.onnx,"['Constant', 'Conv', 'Gemm', 'Relu', 'Reshape']",466604
+convolutional,metaroom_2023,4cnn_tz_70_11_no_custom_OP.onnx,"['Constant', 'Conv', 'Gemm', 'Relu', 'Reshape']",466604
+convolutional,metaroom_2023,4cnn_tz_71_11_no_custom_OP.onnx,"['Constant', 'Conv', 'Gemm', 'Relu', 'Reshape']",466604
+convolutional,metaroom_2023,4cnn_tz_79_13_no_custom_OP.onnx,"['Constant', 'Conv', 'Gemm', 'Relu', 'Reshape']",466604
+convolutional,metaroom_2023,4cnn_tz_7_1_no_custom_OP.onnx,"['Constant', 'Conv', 'Gemm', 'Relu', 'Reshape']",466604
+convolutional,metaroom_2023,4cnn_tz_81_13_no_custom_OP.onnx,"['Constant', 'Conv', 'Gemm', 'Relu', 'Reshape']",466604
+convolutional,metaroom_2023,4cnn_tz_82_13_no_custom_OP.onnx,"['Constant', 'Conv', 'Gemm', 'Relu', 'Reshape']",466604
+convolutional,metaroom_2023,4cnn_tz_8_1_no_custom_OP.onnx,"['Constant', 'Conv', 'Gemm', 'Relu', 'Reshape']",466604
+convolutional,metaroom_2023,4cnn_tz_91_15_no_custom_OP.onnx,"['Constant', 'Conv', 'Gemm', 'Relu', 'Reshape']",466604
+convolutional,metaroom_2023,4cnn_tz_94_15_no_custom_OP.onnx,"['Constant', 'Conv', 'Gemm', 'Relu', 'Reshape']",466604
+convolutional,metaroom_2023,4cnn_tz_99_16_no_custom_OP.onnx,"['Constant', 'Conv', 'Gemm', 'Relu', 'Reshape']",466604
+convolutional,metaroom_2023,4cnn_tz_9_1_no_custom_OP.onnx,"['Constant', 'Conv', 'Gemm', 'Relu', 'Reshape']",466604
+convolutional,metaroom_2023,6cnn_ry_0_0_no_custom_OP.onnx,"['Constant', 'Conv', 'Gemm', 'Relu', 'Reshape']",7410996
+convolutional,metaroom_2023,6cnn_ry_102_17_no_custom_OP.onnx,"['Constant', 'Conv', 'Gemm', 'Relu', 'Reshape']",7410996
+convolutional,metaroom_2023,6cnn_ry_103_17_no_custom_OP.onnx,"['Constant', 'Conv', 'Gemm', 'Relu', 'Reshape']",7410996
+convolutional,metaroom_2023,6cnn_ry_104_17_no_custom_OP.onnx,"['Constant', 'Conv', 'Gemm', 'Relu', 'Reshape']",7410996
+convolutional,metaroom_2023,6cnn_ry_105_17_no_custom_OP.onnx,"['Constant', 'Conv', 'Gemm', 'Relu', 'Reshape']",7410996
+convolutional,metaroom_2023,6cnn_ry_106_17_no_custom_OP.onnx,"['Constant', 'Conv', 'Gemm', 'Relu', 'Reshape']",7410996
+convolutional,metaroom_2023,6cnn_ry_10_1_no_custom_OP.onnx,"['Constant', 'Conv', 'Gemm', 'Relu', 'Reshape']",7410996
+convolutional,metaroom_2023,6cnn_ry_114_19_no_custom_OP.onnx,"['Constant', 'Conv', 'Gemm', 'Relu', 'Reshape']",7410996
+convolutional,metaroom_2023,6cnn_ry_117_19_no_custom_OP.onnx,"['Constant', 'Conv', 'Gemm', 'Relu', 'Reshape']",7410996
+convolutional,metaroom_2023,6cnn_ry_118_19_no_custom_OP.onnx,"['Constant', 'Conv', 'Gemm', 'Relu', 'Reshape']",7410996
+convolutional,metaroom_2023,6cnn_ry_119_19_no_custom_OP.onnx,"['Constant', 'Conv', 'Gemm', 'Relu', 'Reshape']",7410996
+convolutional,metaroom_2023,6cnn_ry_11_1_no_custom_OP.onnx,"['Constant', 'Conv', 'Gemm', 'Relu', 'Reshape']",7410996
+convolutional,metaroom_2023,6cnn_ry_12_2_no_custom_OP.onnx,"['Constant', 'Conv', 'Gemm', 'Relu', 'Reshape']",7410996
+convolutional,metaroom_2023,6cnn_ry_15_2_no_custom_OP.onnx,"['Constant', 'Conv', 'Gemm', 'Relu', 'Reshape']",7410996
+convolutional,metaroom_2023,6cnn_ry_18_3_no_custom_OP.onnx,"['Constant', 'Conv', 'Gemm', 'Relu', 'Reshape']",7410996
+convolutional,metaroom_2023,6cnn_ry_1_0_no_custom_OP.onnx,"['Constant', 'Conv', 'Gemm', 'Relu', 'Reshape']",7410996
+convolutional,metaroom_2023,6cnn_ry_20_3_no_custom_OP.onnx,"['Constant', 'Conv', 'Gemm', 'Relu', 'Reshape']",7410996
+convolutional,metaroom_2023,6cnn_ry_21_3_no_custom_OP.onnx,"['Constant', 'Conv', 'Gemm', 'Relu', 'Reshape']",7410996
+convolutional,metaroom_2023,6cnn_ry_22_3_no_custom_OP.onnx,"['Constant', 'Conv', 'Gemm', 'Relu', 'Reshape']",7410996
+convolutional,metaroom_2023,6cnn_ry_23_3_no_custom_OP.onnx,"['Constant', 'Conv', 'Gemm', 'Relu', 'Reshape']",7410996
+convolutional,metaroom_2023,6cnn_ry_28_4_no_custom_OP.onnx,"['Constant', 'Conv', 'Gemm', 'Relu', 'Reshape']",7410996
+convolutional,metaroom_2023,6cnn_ry_30_5_no_custom_OP.onnx,"['Constant', 'Conv', 'Gemm', 'Relu', 'Reshape']",7410996
+convolutional,metaroom_2023,6cnn_ry_35_5_no_custom_OP.onnx,"['Constant', 'Conv', 'Gemm', 'Relu', 'Reshape']",7410996
+convolutional,metaroom_2023,6cnn_ry_36_6_no_custom_OP.onnx,"['Constant', 'Conv', 'Gemm', 'Relu', 'Reshape']",7410996
+convolutional,metaroom_2023,6cnn_ry_37_6_no_custom_OP.onnx,"['Constant', 'Conv', 'Gemm', 'Relu', 'Reshape']",7410996
+convolutional,metaroom_2023,6cnn_ry_38_6_no_custom_OP.onnx,"['Constant', 'Conv', 'Gemm', 'Relu', 'Reshape']",7410996
+convolutional,metaroom_2023,6cnn_ry_39_6_no_custom_OP.onnx,"['Constant', 'Conv', 'Gemm', 'Relu', 'Reshape']",7410996
+convolutional,metaroom_2023,6cnn_ry_3_0_no_custom_OP.onnx,"['Constant', 'Conv', 'Gemm', 'Relu', 'Reshape']",7410996
+convolutional,metaroom_2023,6cnn_ry_40_6_no_custom_OP.onnx,"['Constant', 'Conv', 'Gemm', 'Relu', 'Reshape']",7410996
+convolutional,metaroom_2023,6cnn_ry_41_6_no_custom_OP.onnx,"['Constant', 'Conv', 'Gemm', 'Relu', 'Reshape']",7410996
+convolutional,metaroom_2023,6cnn_ry_48_8_no_custom_OP.onnx,"['Constant', 'Conv', 'Gemm', 'Relu', 'Reshape']",7410996
+convolutional,metaroom_2023,6cnn_ry_49_8_no_custom_OP.onnx,"['Constant', 'Conv', 'Gemm', 'Relu', 'Reshape']",7410996
+convolutional,metaroom_2023,6cnn_ry_4_0_no_custom_OP.onnx,"['Constant', 'Conv', 'Gemm', 'Relu', 'Reshape']",7410996
+convolutional,metaroom_2023,6cnn_ry_52_8_no_custom_OP.onnx,"['Constant', 'Conv', 'Gemm', 'Relu', 'Reshape']",7410996
+convolutional,metaroom_2023,6cnn_ry_53_8_no_custom_OP.onnx,"['Constant', 'Conv', 'Gemm', 'Relu', 'Reshape']",7410996
+convolutional,metaroom_2023,6cnn_ry_54_9_no_custom_OP.onnx,"['Constant', 'Conv', 'Gemm', 'Relu', 'Reshape']",7410996
+convolutional,metaroom_2023,6cnn_ry_57_9_no_custom_OP.onnx,"['Constant', 'Conv', 'Gemm', 'Relu', 'Reshape']",7410996
+convolutional,metaroom_2023,6cnn_ry_5_0_no_custom_OP.onnx,"['Constant', 'Conv', 'Gemm', 'Relu', 'Reshape']",7410996
+convolutional,metaroom_2023,6cnn_ry_62_10_no_custom_OP.onnx,"['Constant', 'Conv', 'Gemm', 'Relu', 'Reshape']",7410996
+convolutional,metaroom_2023,6cnn_ry_64_10_no_custom_OP.onnx,"['Constant', 'Conv', 'Gemm', 'Relu', 'Reshape']",7410996
+convolutional,metaroom_2023,6cnn_ry_65_10_no_custom_OP.onnx,"['Constant', 'Conv', 'Gemm', 'Relu', 'Reshape']",7410996
+convolutional,metaroom_2023,6cnn_ry_66_11_no_custom_OP.onnx,"['Constant', 'Conv', 'Gemm', 'Relu', 'Reshape']",7410996
+convolutional,metaroom_2023,6cnn_ry_67_11_no_custom_OP.onnx,"['Constant', 'Conv', 'Gemm', 'Relu', 'Reshape']",7410996
+convolutional,metaroom_2023,6cnn_ry_68_11_no_custom_OP.onnx,"['Constant', 'Conv', 'Gemm', 'Relu', 'Reshape']",7410996
+convolutional,metaroom_2023,6cnn_ry_6_1_no_custom_OP.onnx,"['Constant', 'Conv', 'Gemm', 'Relu', 'Reshape']",7410996
+convolutional,metaroom_2023,6cnn_ry_70_11_no_custom_OP.onnx,"['Constant', 'Conv', 'Gemm', 'Relu', 'Reshape']",7410996
+convolutional,metaroom_2023,6cnn_ry_71_11_no_custom_OP.onnx,"['Constant', 'Conv', 'Gemm', 'Relu', 'Reshape']",7410996
+convolutional,metaroom_2023,6cnn_ry_75_12_no_custom_OP.onnx,"['Constant', 'Conv', 'Gemm', 'Relu', 'Reshape']",7410996
+convolutional,metaroom_2023,6cnn_ry_77_12_no_custom_OP.onnx,"['Constant', 'Conv', 'Gemm', 'Relu', 'Reshape']",7410996
+convolutional,metaroom_2023,6cnn_ry_78_13_no_custom_OP.onnx,"['Constant', 'Conv', 'Gemm', 'Relu', 'Reshape']",7410996
+convolutional,metaroom_2023,6cnn_ry_80_13_no_custom_OP.onnx,"['Constant', 'Conv', 'Gemm', 'Relu', 'Reshape']",7410996
+convolutional,metaroom_2023,6cnn_ry_81_13_no_custom_OP.onnx,"['Constant', 'Conv', 'Gemm', 'Relu', 'Reshape']",7410996
+convolutional,metaroom_2023,6cnn_ry_90_15_no_custom_OP.onnx,"['Constant', 'Conv', 'Gemm', 'Relu', 'Reshape']",7410996
+convolutional,metaroom_2023,6cnn_ry_91_15_no_custom_OP.onnx,"['Constant', 'Conv', 'Gemm', 'Relu', 'Reshape']",7410996
+convolutional,metaroom_2023,6cnn_ry_92_15_no_custom_OP.onnx,"['Constant', 'Conv', 'Gemm', 'Relu', 'Reshape']",7410996
+convolutional,metaroom_2023,6cnn_ry_93_15_no_custom_OP.onnx,"['Constant', 'Conv', 'Gemm', 'Relu', 'Reshape']",7410996
+convolutional,metaroom_2023,6cnn_ry_94_15_no_custom_OP.onnx,"['Constant', 'Conv', 'Gemm', 'Relu', 'Reshape']",7410996
+convolutional,metaroom_2023,6cnn_ry_95_15_no_custom_OP.onnx,"['Constant', 'Conv', 'Gemm', 'Relu', 'Reshape']",7410996
+convolutional,metaroom_2023,6cnn_ry_9_1_no_custom_OP.onnx,"['Constant', 'Conv', 'Gemm', 'Relu', 'Reshape']",7410996
+convolutional,metaroom_2023,6cnn_tz_0_0_no_custom_OP.onnx,"['Constant', 'Conv', 'Gemm', 'Relu', 'Reshape']",7410996
+convolutional,metaroom_2023,6cnn_tz_102_17_no_custom_OP.onnx,"['Constant', 'Conv', 'Gemm', 'Relu', 'Reshape']",7410996
+convolutional,metaroom_2023,6cnn_tz_103_17_no_custom_OP.onnx,"['Constant', 'Conv', 'Gemm', 'Relu', 'Reshape']",7410996
+convolutional,metaroom_2023,6cnn_tz_104_17_no_custom_OP.onnx,"['Constant', 'Conv', 'Gemm', 'Relu', 'Reshape']",7410996
+convolutional,metaroom_2023,6cnn_tz_105_17_no_custom_OP.onnx,"['Constant', 'Conv', 'Gemm', 'Relu', 'Reshape']",7410996
+convolutional,metaroom_2023,6cnn_tz_106_17_no_custom_OP.onnx,"['Constant', 'Conv', 'Gemm', 'Relu', 'Reshape']",7410996
+convolutional,metaroom_2023,6cnn_tz_10_1_no_custom_OP.onnx,"['Constant', 'Conv', 'Gemm', 'Relu', 'Reshape']",7410996
+convolutional,metaroom_2023,6cnn_tz_113_18_no_custom_OP.onnx,"['Constant', 'Conv', 'Gemm', 'Relu', 'Reshape']",7410996
+convolutional,metaroom_2023,6cnn_tz_114_19_no_custom_OP.onnx,"['Constant', 'Conv', 'Gemm', 'Relu', 'Reshape']",7410996
+convolutional,metaroom_2023,6cnn_tz_117_19_no_custom_OP.onnx,"['Constant', 'Conv', 'Gemm', 'Relu', 'Reshape']",7410996
+convolutional,metaroom_2023,6cnn_tz_118_19_no_custom_OP.onnx,"['Constant', 'Conv', 'Gemm', 'Relu', 'Reshape']",7410996
+convolutional,metaroom_2023,6cnn_tz_119_19_no_custom_OP.onnx,"['Constant', 'Conv', 'Gemm', 'Relu', 'Reshape']",7410996
+convolutional,metaroom_2023,6cnn_tz_11_1_no_custom_OP.onnx,"['Constant', 'Conv', 'Gemm', 'Relu', 'Reshape']",7410996
+convolutional,metaroom_2023,6cnn_tz_15_2_no_custom_OP.onnx,"['Constant', 'Conv', 'Gemm', 'Relu', 'Reshape']",7410996
+convolutional,metaroom_2023,6cnn_tz_18_3_no_custom_OP.onnx,"['Constant', 'Conv', 'Gemm', 'Relu', 'Reshape']",7410996
+convolutional,metaroom_2023,6cnn_tz_19_3_no_custom_OP.onnx,"['Constant', 'Conv', 'Gemm', 'Relu', 'Reshape']",7410996
+convolutional,metaroom_2023,6cnn_tz_1_0_no_custom_OP.onnx,"['Constant', 'Conv', 'Gemm', 'Relu', 'Reshape']",7410996
+convolutional,metaroom_2023,6cnn_tz_20_3_no_custom_OP.onnx,"['Constant', 'Conv', 'Gemm', 'Relu', 'Reshape']",7410996
+convolutional,metaroom_2023,6cnn_tz_21_3_no_custom_OP.onnx,"['Constant', 'Conv', 'Gemm', 'Relu', 'Reshape']",7410996
+convolutional,metaroom_2023,6cnn_tz_22_3_no_custom_OP.onnx,"['Constant', 'Conv', 'Gemm', 'Relu', 'Reshape']",7410996
+convolutional,metaroom_2023,6cnn_tz_23_3_no_custom_OP.onnx,"['Constant', 'Conv', 'Gemm', 'Relu', 'Reshape']",7410996
+convolutional,metaroom_2023,6cnn_tz_28_4_no_custom_OP.onnx,"['Constant', 'Conv', 'Gemm', 'Relu', 'Reshape']",7410996
+convolutional,metaroom_2023,6cnn_tz_30_5_no_custom_OP.onnx,"['Constant', 'Conv', 'Gemm', 'Relu', 'Reshape']",7410996
+convolutional,metaroom_2023,6cnn_tz_31_5_no_custom_OP.onnx,"['Constant', 'Conv', 'Gemm', 'Relu', 'Reshape']",7410996
+convolutional,metaroom_2023,6cnn_tz_35_5_no_custom_OP.onnx,"['Constant', 'Conv', 'Gemm', 'Relu', 'Reshape']",7410996
+convolutional,metaroom_2023,6cnn_tz_36_6_no_custom_OP.onnx,"['Constant', 'Conv', 'Gemm', 'Relu', 'Reshape']",7410996
+convolutional,metaroom_2023,6cnn_tz_37_6_no_custom_OP.onnx,"['Constant', 'Conv', 'Gemm', 'Relu', 'Reshape']",7410996
+convolutional,metaroom_2023,6cnn_tz_38_6_no_custom_OP.onnx,"['Constant', 'Conv', 'Gemm', 'Relu', 'Reshape']",7410996
+convolutional,metaroom_2023,6cnn_tz_39_6_no_custom_OP.onnx,"['Constant', 'Conv', 'Gemm', 'Relu', 'Reshape']",7410996
+convolutional,metaroom_2023,6cnn_tz_3_0_no_custom_OP.onnx,"['Constant', 'Conv', 'Gemm', 'Relu', 'Reshape']",7410996
+convolutional,metaroom_2023,6cnn_tz_40_6_no_custom_OP.onnx,"['Constant', 'Conv', 'Gemm', 'Relu', 'Reshape']",7410996
+convolutional,metaroom_2023,6cnn_tz_41_6_no_custom_OP.onnx,"['Constant', 'Conv', 'Gemm', 'Relu', 'Reshape']",7410996
+convolutional,metaroom_2023,6cnn_tz_48_8_no_custom_OP.onnx,"['Constant', 'Conv', 'Gemm', 'Relu', 'Reshape']",7410996
+convolutional,metaroom_2023,6cnn_tz_49_8_no_custom_OP.onnx,"['Constant', 'Conv', 'Gemm', 'Relu', 'Reshape']",7410996
+convolutional,metaroom_2023,6cnn_tz_4_0_no_custom_OP.onnx,"['Constant', 'Conv', 'Gemm', 'Relu', 'Reshape']",7410996
+convolutional,metaroom_2023,6cnn_tz_52_8_no_custom_OP.onnx,"['Constant', 'Conv', 'Gemm', 'Relu', 'Reshape']",7410996
+convolutional,metaroom_2023,6cnn_tz_53_8_no_custom_OP.onnx,"['Constant', 'Conv', 'Gemm', 'Relu', 'Reshape']",7410996
+convolutional,metaroom_2023,6cnn_tz_54_9_no_custom_OP.onnx,"['Constant', 'Conv', 'Gemm', 'Relu', 'Reshape']",7410996
+convolutional,metaroom_2023,6cnn_tz_55_9_no_custom_OP.onnx,"['Constant', 'Conv', 'Gemm', 'Relu', 'Reshape']",7410996
+convolutional,metaroom_2023,6cnn_tz_57_9_no_custom_OP.onnx,"['Constant', 'Conv', 'Gemm', 'Relu', 'Reshape']",7410996
+convolutional,metaroom_2023,6cnn_tz_5_0_no_custom_OP.onnx,"['Constant', 'Conv', 'Gemm', 'Relu', 'Reshape']",7410996
+convolutional,metaroom_2023,6cnn_tz_62_10_no_custom_OP.onnx,"['Constant', 'Conv', 'Gemm', 'Relu', 'Reshape']",7410996
+convolutional,metaroom_2023,6cnn_tz_63_10_no_custom_OP.onnx,"['Constant', 'Conv', 'Gemm', 'Relu', 'Reshape']",7410996
+convolutional,metaroom_2023,6cnn_tz_64_10_no_custom_OP.onnx,"['Constant', 'Conv', 'Gemm', 'Relu', 'Reshape']",7410996
+convolutional,metaroom_2023,6cnn_tz_65_10_no_custom_OP.onnx,"['Constant', 'Conv', 'Gemm', 'Relu', 'Reshape']",7410996
+convolutional,metaroom_2023,6cnn_tz_66_11_no_custom_OP.onnx,"['Constant', 'Conv', 'Gemm', 'Relu', 'Reshape']",7410996
+convolutional,metaroom_2023,6cnn_tz_67_11_no_custom_OP.onnx,"['Constant', 'Conv', 'Gemm', 'Relu', 'Reshape']",7410996
+convolutional,metaroom_2023,6cnn_tz_68_11_no_custom_OP.onnx,"['Constant', 'Conv', 'Gemm', 'Relu', 'Reshape']",7410996
+convolutional,metaroom_2023,6cnn_tz_6_1_no_custom_OP.onnx,"['Constant', 'Conv', 'Gemm', 'Relu', 'Reshape']",7410996
+convolutional,metaroom_2023,6cnn_tz_70_11_no_custom_OP.onnx,"['Constant', 'Conv', 'Gemm', 'Relu', 'Reshape']",7410996
+convolutional,metaroom_2023,6cnn_tz_71_11_no_custom_OP.onnx,"['Constant', 'Conv', 'Gemm', 'Relu', 'Reshape']",7410996
+convolutional,metaroom_2023,6cnn_tz_75_12_no_custom_OP.onnx,"['Constant', 'Conv', 'Gemm', 'Relu', 'Reshape']",7410996
+convolutional,metaroom_2023,6cnn_tz_78_13_no_custom_OP.onnx,"['Constant', 'Conv', 'Gemm', 'Relu', 'Reshape']",7410996
+convolutional,metaroom_2023,6cnn_tz_79_13_no_custom_OP.onnx,"['Constant', 'Conv', 'Gemm', 'Relu', 'Reshape']",7410996
+convolutional,metaroom_2023,6cnn_tz_81_13_no_custom_OP.onnx,"['Constant', 'Conv', 'Gemm', 'Relu', 'Reshape']",7410996
+convolutional,metaroom_2023,6cnn_tz_91_15_no_custom_OP.onnx,"['Constant', 'Conv', 'Gemm', 'Relu', 'Reshape']",7410996
+convolutional,metaroom_2023,6cnn_tz_93_15_no_custom_OP.onnx,"['Constant', 'Conv', 'Gemm', 'Relu', 'Reshape']",7410996
+convolutional,metaroom_2023,6cnn_tz_94_15_no_custom_OP.onnx,"['Constant', 'Conv', 'Gemm', 'Relu', 'Reshape']",7410996
+convolutional,metaroom_2023,6cnn_tz_95_15_no_custom_OP.onnx,"['Constant', 'Conv', 'Gemm', 'Relu', 'Reshape']",7410996
+convolutional,metaroom_2023,6cnn_tz_9_1_no_custom_OP.onnx,"['Constant', 'Conv', 'Gemm', 'Relu', 'Reshape']",7410996
+convolutional,oval21,cifar_base_kw.onnx,"['Conv', 'Flatten', 'Gemm', 'Relu']",105966
+convolutional,oval21,cifar_deep_kw.onnx,"['Conv', 'Flatten', 'Gemm', 'Relu']",54902
+convolutional,oval21,cifar_wide_kw.onnx,"['Conv', 'Flatten', 'Gemm', 'Relu']",214918
+convolutional,traffic_signs_recognition_2023,3_30_30_QConv_16_3_QConv_32_2_Dense_43_ep_30.onnx,"['Add', 'Conv', 'MatMul', 'Reshape', 'Sign', 'Softmax', 'Transpose']",1005587
+convolutional,traffic_signs_recognition_2023,3_48_48_QConv_32_5_MP_2_BN_QConv_64_5_MP_2_BN_QConv_64_3_BN_Dense_256_BN_Dense_43_ep_30.onnx,"['Add', 'BatchNormalization', 'Conv', 'MatMul', 'MaxPool', 'Mul', 'Reshape', 'Sign', 'Softmax', 'Transpose']",905251
+convolutional,traffic_signs_recognition_2023,3_64_64_QConv_32_5_MP_2_BN_QConv_64_5_MP_2_BN_QConv_64_3_MP_2_BN_Dense_1024_BN_Dense_43_ep_30.onnx,"['Add', 'BatchNormalization', 'Conv', 'MatMul', 'MaxPool', 'Mul', 'Reshape', 'Sign', 'Softmax', 'Transpose']",1775523
+fullyconnected,acasxu_2023,ACASXU_run2a_1_1_batch_2000.onnx,"['Add', 'Flatten', 'MatMul', 'Relu', 'Sub']",13310
+fullyconnected,acasxu_2023,ACASXU_run2a_1_2_batch_2000.onnx,"['Add', 'Flatten', 'MatMul', 'Relu', 'Sub']",13310
+fullyconnected,acasxu_2023,ACASXU_run2a_1_3_batch_2000.onnx,"['Add', 'Flatten', 'MatMul', 'Relu', 'Sub']",13310
+fullyconnected,acasxu_2023,ACASXU_run2a_1_4_batch_2000.onnx,"['Add', 'Flatten', 'MatMul', 'Relu', 'Sub']",13310
+fullyconnected,acasxu_2023,ACASXU_run2a_1_5_batch_2000.onnx,"['Add', 'Flatten', 'MatMul', 'Relu', 'Sub']",13310
+fullyconnected,acasxu_2023,ACASXU_run2a_1_6_batch_2000.onnx,"['Add', 'Flatten', 'MatMul', 'Relu', 'Sub']",13310
+fullyconnected,acasxu_2023,ACASXU_run2a_1_7_batch_2000.onnx,"['Add', 'Flatten', 'MatMul', 'Relu', 'Sub']",13310
+fullyconnected,acasxu_2023,ACASXU_run2a_1_8_batch_2000.onnx,"['Add', 'Flatten', 'MatMul', 'Relu', 'Sub']",13310
+fullyconnected,acasxu_2023,ACASXU_run2a_1_9_batch_2000.onnx,"['Add', 'Flatten', 'MatMul', 'Relu', 'Sub']",13310
+fullyconnected,acasxu_2023,ACASXU_run2a_2_1_batch_2000.onnx,"['Add', 'Flatten', 'MatMul', 'Relu', 'Sub']",13310
+fullyconnected,acasxu_2023,ACASXU_run2a_2_2_batch_2000.onnx,"['Add', 'Flatten', 'MatMul', 'Relu', 'Sub']",13310
+fullyconnected,acasxu_2023,ACASXU_run2a_2_3_batch_2000.onnx,"['Add', 'Flatten', 'MatMul', 'Relu', 'Sub']",13310
+fullyconnected,acasxu_2023,ACASXU_run2a_2_4_batch_2000.onnx,"['Add', 'Flatten', 'MatMul', 'Relu', 'Sub']",13310
+fullyconnected,acasxu_2023,ACASXU_run2a_2_5_batch_2000.onnx,"['Add', 'Flatten', 'MatMul', 'Relu', 'Sub']",13310
+fullyconnected,acasxu_2023,ACASXU_run2a_2_6_batch_2000.onnx,"['Add', 'Flatten', 'MatMul', 'Relu', 'Sub']",13310
+fullyconnected,acasxu_2023,ACASXU_run2a_2_7_batch_2000.onnx,"['Add', 'Flatten', 'MatMul', 'Relu', 'Sub']",13310
+fullyconnected,acasxu_2023,ACASXU_run2a_2_8_batch_2000.onnx,"['Add', 'Flatten', 'MatMul', 'Relu', 'Sub']",13310
+fullyconnected,acasxu_2023,ACASXU_run2a_2_9_batch_2000.onnx,"['Add', 'Flatten', 'MatMul', 'Relu', 'Sub']",13310
+fullyconnected,acasxu_2023,ACASXU_run2a_3_1_batch_2000.onnx,"['Add', 'Flatten', 'MatMul', 'Relu', 'Sub']",13310
+fullyconnected,acasxu_2023,ACASXU_run2a_3_2_batch_2000.onnx,"['Add', 'Flatten', 'MatMul', 'Relu', 'Sub']",13310
+fullyconnected,acasxu_2023,ACASXU_run2a_3_3_batch_2000.onnx,"['Add', 'Flatten', 'MatMul', 'Relu', 'Sub']",13310
+fullyconnected,acasxu_2023,ACASXU_run2a_3_4_batch_2000.onnx,"['Add', 'Flatten', 'MatMul', 'Relu', 'Sub']",13310
+fullyconnected,acasxu_2023,ACASXU_run2a_3_5_batch_2000.onnx,"['Add', 'Flatten', 'MatMul', 'Relu', 'Sub']",13310
+fullyconnected,acasxu_2023,ACASXU_run2a_3_6_batch_2000.onnx,"['Add', 'Flatten', 'MatMul', 'Relu', 'Sub']",13310
+fullyconnected,acasxu_2023,ACASXU_run2a_3_7_batch_2000.onnx,"['Add', 'Flatten', 'MatMul', 'Relu', 'Sub']",13310
+fullyconnected,acasxu_2023,ACASXU_run2a_3_8_batch_2000.onnx,"['Add', 'Flatten', 'MatMul', 'Relu', 'Sub']",13310
+fullyconnected,acasxu_2023,ACASXU_run2a_3_9_batch_2000.onnx,"['Add', 'Flatten', 'MatMul', 'Relu', 'Sub']",13310
+fullyconnected,acasxu_2023,ACASXU_run2a_4_1_batch_2000.onnx,"['Add', 'Flatten', 'MatMul', 'Relu', 'Sub']",13310
+fullyconnected,acasxu_2023,ACASXU_run2a_4_2_batch_2000.onnx,"['Add', 'Flatten', 'MatMul', 'Relu', 'Sub']",13310
+fullyconnected,acasxu_2023,ACASXU_run2a_4_3_batch_2000.onnx,"['Add', 'Flatten', 'MatMul', 'Relu', 'Sub']",13310
+fullyconnected,acasxu_2023,ACASXU_run2a_4_4_batch_2000.onnx,"['Add', 'Flatten', 'MatMul', 'Relu', 'Sub']",13310
+fullyconnected,acasxu_2023,ACASXU_run2a_4_5_batch_2000.onnx,"['Add', 'Flatten', 'MatMul', 'Relu', 'Sub']",13310
+fullyconnected,acasxu_2023,ACASXU_run2a_4_6_batch_2000.onnx,"['Add', 'Flatten', 'MatMul', 'Relu', 'Sub']",13310
+fullyconnected,acasxu_2023,ACASXU_run2a_4_7_batch_2000.onnx,"['Add', 'Flatten', 'MatMul', 'Relu', 'Sub']",13310
+fullyconnected,acasxu_2023,ACASXU_run2a_4_8_batch_2000.onnx,"['Add', 'Flatten', 'MatMul', 'Relu', 'Sub']",13310
+fullyconnected,acasxu_2023,ACASXU_run2a_4_9_batch_2000.onnx,"['Add', 'Flatten', 'MatMul', 'Relu', 'Sub']",13310
+fullyconnected,acasxu_2023,ACASXU_run2a_5_1_batch_2000.onnx,"['Add', 'Flatten', 'MatMul', 'Relu', 'Sub']",13310
+fullyconnected,acasxu_2023,ACASXU_run2a_5_2_batch_2000.onnx,"['Add', 'Flatten', 'MatMul', 'Relu', 'Sub']",13310
+fullyconnected,acasxu_2023,ACASXU_run2a_5_3_batch_2000.onnx,"['Add', 'Flatten', 'MatMul', 'Relu', 'Sub']",13310
+fullyconnected,acasxu_2023,ACASXU_run2a_5_4_batch_2000.onnx,"['Add', 'Flatten', 'MatMul', 'Relu', 'Sub']",13310
+fullyconnected,acasxu_2023,ACASXU_run2a_5_5_batch_2000.onnx,"['Add', 'Flatten', 'MatMul', 'Relu', 'Sub']",13310
+fullyconnected,acasxu_2023,ACASXU_run2a_5_6_batch_2000.onnx,"['Add', 'Flatten', 'MatMul', 'Relu', 'Sub']",13310
+fullyconnected,acasxu_2023,ACASXU_run2a_5_7_batch_2000.onnx,"['Add', 'Flatten', 'MatMul', 'Relu', 'Sub']",13310
+fullyconnected,acasxu_2023,ACASXU_run2a_5_8_batch_2000.onnx,"['Add', 'Flatten', 'MatMul', 'Relu', 'Sub']",13310
+fullyconnected,acasxu_2023,ACASXU_run2a_5_9_batch_2000.onnx,"['Add', 'Flatten', 'MatMul', 'Relu', 'Sub']",13310
+fullyconnected,ACC,NET_0_1.5_5.onnx,"['Gemm', 'Relu']",301
+fullyconnected,ACC,NET_1_1.5_5.onnx,"['Gemm', 'Relu']",2281
+fullyconnected,ACC,NET_2_1.5_5.onnx,"['Gemm', 'Relu']",1141
+fullyconnected,cora,cifar10-point.onnx,"['Add', 'MatMul', 'Mul', 'Relu']",1147262
+fullyconnected,cora,cifar10-set.onnx,"['Add', 'MatMul', 'Mul', 'Relu']",1147262
+fullyconnected,cora,cifar10-trades.onnx,"['Add', 'MatMul', 'Mul', 'Relu']",1147262
+fullyconnected,cora,mnist-point.onnx,"['Add', 'MatMul', 'Relu']",575260
+fullyconnected,cora,mnist-set.onnx,"['Add', 'MatMul', 'Relu']",575260
+fullyconnected,cora,mnist-trades.onnx,"['Add', 'MatMul', 'Relu']",575260
+fullyconnected,cora,svhn-point.onnx,"['Add', 'MatMul', 'Mul', 'Relu']",1147262
+fullyconnected,cora,svhn-set.onnx,"['Add', 'MatMul', 'Mul', 'Relu']",1147262
+fullyconnected,cora,svhn-trades.onnx,"['Add', 'MatMul', 'Mul', 'Relu']",1147262
+fullyconnected,dist_shift_2023,mnist_concat.onnx,"['Gemm', 'Relu', 'Reshape', 'Sigmoid']",342696
+fullyconnected,drones_1d_hovering,AC1.onnx,"['Gemm', 'Relu']",961
+fullyconnected,drones_1d_hovering,AC2.onnx,"['Gemm', 'Relu']",2945
+fullyconnected,drones_1d_hovering,AC3.onnx,"['Gemm', 'Relu']",9985
+fullyconnected,drones_1d_hovering,AC4.onnx,"['Gemm', 'Relu']",36353
+fullyconnected,drones_1d_hovering,AC5.onnx,"['Gemm', 'Relu']",1089
+fullyconnected,drones_1d_hovering,AC6.onnx,"['Gemm', 'Relu']",3457
+fullyconnected,drones_1d_hovering,AC7.onnx,"['Gemm', 'Relu']",12033
+fullyconnected,drones_1d_hovering,AC8.onnx,"['Gemm', 'Relu']",44545
+fullyconnected,mnist_fc,mnist-net_256x2.onnx,"['Flatten', 'Gemm', 'Relu']",269322
+fullyconnected,mnist_fc,mnist-net_256x4.onnx,"['Flatten', 'Gemm', 'Relu']",400906
+fullyconnected,mnist_fc,mnist-net_256x6.onnx,"['Flatten', 'Gemm', 'Relu']",532490
+fullyconnected,nn4sys_2023,lindex.onnx,"['Gemm', 'Relu']",33409
+fullyconnected,nn4sys_2023,lindex_deep.onnx,"['Gemm', 'Relu']",66433
+fullyconnected,reach_prob_density,gcas.onnx,"['Gemm', 'Relu']",1998
+fullyconnected,reach_prob_density,robot.onnx,"['Gemm', 'Relu']",9029
+fullyconnected,reach_prob_density,vdp.onnx,"['Gemm', 'Relu']",1283
+fullyconnected,rl_benchmarks,cartpole.onnx,"['Flatten', 'Gemm', 'Relu']",4610
+fullyconnected,rl_benchmarks,dubinsrejoin.onnx,"['Add', 'MatMul', 'Relu']",70152
+fullyconnected,rl_benchmarks,lunarlander.onnx,"['Flatten', 'Gemm', 'Relu']",4996
+fullyconnected,safenlp,medical/perturbations_0.onnx,"['Add', 'MatMul', 'Relu']",4226
+fullyconnected,safenlp,ruarobot/perturbations_0.onnx,"['Add', 'MatMul', 'Relu']",4226
+fullyconnected,tllverifybench_2023,tllBench_n=2_N=M=16_m=1_instance_1_0.onnx,"['Add', 'MatMul', 'Relu']",267307
+fullyconnected,tllverifybench_2023,tllBench_n=2_N=M=16_m=1_instance_1_1.onnx,"['Add', 'MatMul', 'Relu']",267307
+fullyconnected,tllverifybench_2023,tllBench_n=2_N=M=16_m=1_instance_1_2.onnx,"['Add', 'MatMul', 'Relu']",267307
+fullyconnected,tllverifybench_2023,tllBench_n=2_N=M=16_m=1_instance_1_3.onnx,"['Add', 'MatMul', 'Relu']",267307
+fullyconnected,tllverifybench_2023,tllBench_n=2_N=M=24_m=1_instance_2_0.onnx,"['Add', 'MatMul', 'Relu']",1355164
+fullyconnected,tllverifybench_2023,tllBench_n=2_N=M=24_m=1_instance_2_1.onnx,"['Add', 'MatMul', 'Relu']",1355164
+fullyconnected,tllverifybench_2023,tllBench_n=2_N=M=24_m=1_instance_2_2.onnx,"['Add', 'MatMul', 'Relu']",1355164
+fullyconnected,tllverifybench_2023,tllBench_n=2_N=M=24_m=1_instance_2_3.onnx,"['Add', 'MatMul', 'Relu']",1355164
+fullyconnected,tllverifybench_2023,tllBench_n=2_N=M=32_m=1_instance_3_0.onnx,"['Add', 'MatMul', 'Relu']",4231259
+fullyconnected,tllverifybench_2023,tllBench_n=2_N=M=32_m=1_instance_3_1.onnx,"['Add', 'MatMul', 'Relu']",4231259
+fullyconnected,tllverifybench_2023,tllBench_n=2_N=M=32_m=1_instance_3_2.onnx,"['Add', 'MatMul', 'Relu']",4231259
+fullyconnected,tllverifybench_2023,tllBench_n=2_N=M=32_m=1_instance_3_3.onnx,"['Add', 'MatMul', 'Relu']",4231259
+fullyconnected,tllverifybench_2023,tllBench_n=2_N=M=40_m=1_instance_4_0.onnx,"['Add', 'MatMul', 'Relu']",10394833
+fullyconnected,tllverifybench_2023,tllBench_n=2_N=M=40_m=1_instance_4_1.onnx,"['Add', 'MatMul', 'Relu']",10394833
+fullyconnected,tllverifybench_2023,tllBench_n=2_N=M=40_m=1_instance_4_2.onnx,"['Add', 'MatMul', 'Relu']",10394833
+fullyconnected,tllverifybench_2023,tllBench_n=2_N=M=40_m=1_instance_4_3.onnx,"['Add', 'MatMul', 'Relu']",10394833
+fullyconnected,tllverifybench_2023,tllBench_n=2_N=M=48_m=1_instance_5_0.onnx,"['Add', 'MatMul', 'Relu']",21400348
+fullyconnected,tllverifybench_2023,tllBench_n=2_N=M=48_m=1_instance_5_1.onnx,"['Add', 'MatMul', 'Relu']",21400348
+fullyconnected,tllverifybench_2023,tllBench_n=2_N=M=48_m=1_instance_5_2.onnx,"['Add', 'MatMul', 'Relu']",21400348
+fullyconnected,tllverifybench_2023,tllBench_n=2_N=M=48_m=1_instance_5_3.onnx,"['Add', 'MatMul', 'Relu']",21400348
+fullyconnected,tllverifybench_2023,tllBench_n=2_N=M=56_m=1_instance_6_0.onnx,"['Add', 'MatMul', 'Relu']",39665760
+fullyconnected,tllverifybench_2023,tllBench_n=2_N=M=56_m=1_instance_6_1.onnx,"['Add', 'MatMul', 'Relu']",39665760
+fullyconnected,tllverifybench_2023,tllBench_n=2_N=M=56_m=1_instance_6_2.onnx,"['Add', 'MatMul', 'Relu']",39665760
+fullyconnected,tllverifybench_2023,tllBench_n=2_N=M=56_m=1_instance_6_3.onnx,"['Add', 'MatMul', 'Relu']",39665760
+fullyconnected,tllverifybench_2023,tllBench_n=2_N=M=64_m=1_instance_7_0.onnx,"['Add', 'MatMul', 'Relu']",67387579
+fullyconnected,tllverifybench_2023,tllBench_n=2_N=M=64_m=1_instance_7_1.onnx,"['Add', 'MatMul', 'Relu']",67387579
+fullyconnected,tllverifybench_2023,tllBench_n=2_N=M=64_m=1_instance_7_2.onnx,"['Add', 'MatMul', 'Relu']",67387579
+fullyconnected,tllverifybench_2023,tllBench_n=2_N=M=64_m=1_instance_7_3.onnx,"['Add', 'MatMul', 'Relu']",67387579
+fullyconnected,tllverifybench_2023,tllBench_n=2_N=M=8_m=1_instance_0_0.onnx,"['Add', 'MatMul', 'Relu']",17171
+fullyconnected,tllverifybench_2023,tllBench_n=2_N=M=8_m=1_instance_0_1.onnx,"['Add', 'MatMul', 'Relu']",17171
+fullyconnected,tllverifybench_2023,tllBench_n=2_N=M=8_m=1_instance_0_2.onnx,"['Add', 'MatMul', 'Relu']",17171
+fullyconnected,tllverifybench_2023,tllBench_n=2_N=M=8_m=1_instance_0_3.onnx,"['Add', 'MatMul', 'Relu']",17171
+residual,carvana_unet_2022,unet_simp_small.onnx,"['ArgMax', 'Cast', 'Constant', 'Conv', 'Equal', 'Gather', 'OneHot', 'ReduceSum', 'Relu', 'Slice', 'Softmax', 'Transpose']",149570
+residual,carvana_unet_2022,unet_upsample_small.onnx,"['ArgMax', 'AveragePool', 'Cast', 'Concat', 'Constant', 'ConstantOfShape', 'Conv', 'ConvTranspose', 'Div', 'Equal', 'Gather', 'OneHot', 'Pad', 'ReduceSum', 'Relu', 'Reshape', 'Shape', 'Slice', 'Softmax', 'Sub', 'Transpose', 'Unsqueeze']",329987
+residual,cctsdb_yolo_2023,patch-1.onnx,"['Add', 'ArgMax', 'Cast', 'Clip', 'Concat', 'Constant', 'ConstantOfShape', 'Conv', 'Div', 'Equal', 'Expand', 'Gather', 'Max', 'MaxPool', 'Min', 'Mul', 'Range', 'Relu', 'Reshape', 'Resize', 'ScatterND', 'Shape', 'Slice', 'Squeeze', 'Sub', 'Transpose', 'Unsqueeze', 'Where']",99881
+residual,cctsdb_yolo_2023,patch-3.onnx,"['Add', 'ArgMax', 'Cast', 'Clip', 'Concat', 'Constant', 'ConstantOfShape', 'Conv', 'Div', 'Equal', 'Expand', 'Gather', 'Max', 'MaxPool', 'Min', 'Mul', 'Relu', 'Reshape', 'Resize', 'ScatterND', 'Shape', 'Slice', 'Squeeze', 'Sub', 'Transpose', 'Unsqueeze', 'Where']",99881
+residual,cifar100,CIFAR100_resnet_large.onnx,"['Add', 'BatchNormalization', 'Conv', 'Flatten', 'Gemm', 'Relu']",3808152
+residual,cifar100,CIFAR100_resnet_medium.onnx,"['Add', 'BatchNormalization', 'Conv', 'Flatten', 'Gemm', 'Relu']",2536344
+residual,collins_aerospace_benchmark_2024,yolov5nano_LRelu_640.onnx,"['Add', 'Concat', 'Constant', 'Conv', 'LeakyRelu', 'MaxPool', 'Mul', 'Pow', 'Reshape', 'Resize', 'Sigmoid', 'Split', 'Transpose']",1767283
+residual,linearizenn,AllInOne_10_10.onnx,"['Concat', 'Constant', 'Gemm', 'MatMul', 'Relu', 'Slice']",203002
+residual,linearizenn,AllInOne_120_120.onnx,"['Concat', 'Constant', 'Gemm', 'MatMul', 'Relu', 'Slice']",203002
+residual,linearizenn,AllInOne_120_30.onnx,"['Concat', 'Constant', 'Gemm', 'MatMul', 'Relu', 'Slice']",203002
+residual,linearizenn,AllInOne_120_50.onnx,"['Concat', 'Constant', 'Gemm', 'MatMul', 'Relu', 'Slice']",203002
+residual,linearizenn,AllInOne_30_30.onnx,"['Concat', 'Constant', 'Gemm', 'MatMul', 'Relu', 'Slice']",203002
+residual,linearizenn,AllInOne_30_80.onnx,"['Concat', 'Constant', 'Gemm', 'MatMul', 'Relu', 'Slice']",203002
+residual,linearizenn,AllInOne_50_120.onnx,"['Concat', 'Constant', 'Gemm', 'MatMul', 'Relu', 'Slice']",203002
+residual,linearizenn,AllInOne_50_50.onnx,"['Concat', 'Constant', 'Gemm', 'MatMul', 'Relu', 'Slice']",203002
+residual,linearizenn,AllInOne_80_30.onnx,"['Concat', 'Constant', 'Gemm', 'MatMul', 'Relu', 'Slice']",203002
+residual,linearizenn,AllInOne_80_80.onnx,"['Concat', 'Constant', 'Gemm', 'MatMul', 'Relu', 'Slice']",203002
+residual,lsnc,quadrotor2d_output.onnx,"['Add', 'Concat', 'Constant', 'ConstantOfShape', 'Cos', 'Div', 'Gather', 'Gemm', 'LeakyRelu', 'MatMul', 'Mul', 'Neg', 'ReduceSum', 'Relu', 'Shape', 'Slice', 'Sub', 'Unsqueeze']",406
+residual,lsnc,quadrotor2d_state.onnx,"['Add', 'Concat', 'Constant', 'Cos', 'Div', 'Gemm', 'MatMul', 'Mul', 'Neg', 'ReduceSum', 'Relu', 'Sin', 'Slice', 'Sub']",210
+residual,ml4acopf_2024,118_ieee_ml4acopf-linear-nonresidual.onnx,"['Add', 'Concat', 'Constant', 'Gather', 'Gemm', 'MatMul', 'Mul', 'Relu', 'Slice', 'Sub', 'Transpose', 'Unsqueeze']",164199
+residual,ml4acopf_2024,118_ieee_ml4acopf-linear-residual.onnx,"['Add', 'Concat', 'Constant', 'Div', 'Floor', 'Gather', 'Gemm', 'MatMul', 'Mul', 'Relu', 'Slice', 'Sub', 'Transpose', 'Unsqueeze']",164049
+residual,ml4acopf_2024,118_ieee_ml4acopf.onnx,"['Add', 'Concat', 'Constant', 'ConstantOfShape', 'Cos', 'Equal', 'Expand', 'Gather', 'Gemm', 'MatMul', 'Mul', 'Neg', 'Pow', 'Relu', 'Sigmoid', 'Sin', 'Slice', 'Sub', 'Transpose', 'Where']",163868
+residual,ml4acopf_2024,14_ieee_ml4acopf-linear-nonresidual.onnx,"['Add', 'Concat', 'Constant', 'Gather', 'Gemm', 'MatMul', 'Mul', 'Relu', 'Slice', 'Sub', 'Transpose', 'Unsqueeze']",4481
+residual,ml4acopf_2024,14_ieee_ml4acopf-linear-residual.onnx,"['Add', 'Concat', 'Constant', 'Div', 'Floor', 'Gather', 'Gemm', 'MatMul', 'Mul', 'Relu', 'Slice', 'Sub', 'Transpose', 'Unsqueeze']",4331
+residual,ml4acopf_2024,14_ieee_ml4acopf.onnx,"['Add', 'Concat', 'Constant', 'ConstantOfShape', 'Cos', 'Equal', 'Expand', 'Gather', 'Gemm', 'MatMul', 'Mul', 'Neg', 'Pow', 'Relu', 'Sigmoid', 'Sin', 'Slice', 'Sub', 'Transpose', 'Where']",4150
+residual,ml4acopf_2024,300_ieee_ml4acopf-linear-nonresidual.onnx,"['Add', 'Concat', 'Constant', 'Gather', 'Gemm', 'MatMul', 'Mul', 'Relu', 'Slice', 'Sub', 'Transpose', 'Unsqueeze']",680345
+residual,ml4acopf_2024,300_ieee_ml4acopf-linear-residual.onnx,"['Add', 'Concat', 'Constant', 'Div', 'Floor', 'Gather', 'Gemm', 'MatMul', 'Mul', 'Relu', 'Slice', 'Sub', 'Transpose', 'Unsqueeze']",680195
+residual,ml4acopf_2024,300_ieee_ml4acopf.onnx,"['Add', 'Concat', 'Constant', 'ConstantOfShape', 'Cos', 'Equal', 'Expand', 'Gather', 'Gemm', 'MatMul', 'Mul', 'Neg', 'Pow', 'Relu', 'Sigmoid', 'Sin', 'Slice', 'Sub', 'Transpose', 'Where']",680014
+residual,nn4sys_2023,mscn_128d.onnx,"['Add', 'Concat', 'Constant', 'Div', 'Gemm', 'MatMul', 'Mul', 'ReduceSum', 'Relu', 'Sigmoid', 'Slice', 'Split']",102529
+residual,nn4sys_2023,mscn_128d_dual.onnx,"['Add', 'Concat', 'Constant', 'Div', 'Gemm', 'MatMul', 'Mul', 'ReduceSum', 'Relu', 'Sigmoid', 'Slice', 'Split', 'Sub']",154881
+residual,nn4sys_2023,mscn_2048d.onnx,"['Add', 'Concat', 'Constant', 'Div', 'Gemm', 'MatMul', 'Mul', 'ReduceSum', 'Relu', 'Sigmoid', 'Slice', 'Split']",25233409
+residual,nn4sys_2023,pensieve_big_parallel.onnx,"['Concat', 'Constant', 'Conv', 'Div', 'Flatten', 'Gather', 'Gemm', 'MatMul', 'Pow', 'ReduceSum', 'Relu', 'Reshape', 'Slice', 'Split', 'Sub']",527494
+residual,nn4sys_2023,pensieve_big_simple.onnx,"['Concat', 'Constant', 'Conv', 'Gather', 'Gemm', 'Relu', 'Reshape', 'Slice']",527494
+residual,nn4sys_2023,pensieve_mid_parallel.onnx,"['Concat', 'Constant', 'Conv', 'Div', 'Flatten', 'Gather', 'Gemm', 'MatMul', 'Mul', 'ReduceSum', 'Relu', 'Reshape', 'Slice', 'Split', 'Sub']",264454
+residual,nn4sys_2023,pensieve_mid_simple.onnx,"['Concat', 'Constant', 'Conv', 'Gather', 'Gemm', 'Relu', 'Reshape', 'Slice']",264454
+residual,nn4sys_2023,pensieve_small_parallel.onnx,"['Concat', 'Constant', 'Div', 'Flatten', 'Gather', 'Gemm', 'MatMul', 'Pow', 'ReduceSum', 'Relu', 'Reshape', 'Slice', 'Split', 'Sub']",103174
+residual,nn4sys_2023,pensieve_small_simple.onnx,"['Add', 'Concat', 'Constant', 'Gather', 'Gemm', 'MatMul', 'Relu', 'Reshape', 'Slice']",103174
+residual,sri_resnet_a,resnet_3b2_bn_mixup_adv_4.0_bs128_lr-1.onnx,"['Add', 'Conv', 'Gemm', 'Relu', 'Reshape']",354488
+residual,sri_resnet_b,resnet_3b2_bn_mixup_ssadv_4.0_bs128_lr-1_v2.onnx,"['Add', 'Conv', 'Gemm', 'Relu', 'Reshape']",354488
+residual,tinyimagenet,TinyImageNet_resnet_medium.onnx,"['Add', 'BatchNormalization', 'Conv', 'Flatten', 'Gemm', 'Relu']",3616144
+residual,vit_2023,ibp_3_3_8.onnx,"['Add', 'BatchNormalization', 'Concat', 'Constant', 'ConstantOfShape', 'Conv', 'Gather', 'Gemm', 'MatMul', 'Mul', 'ReduceMean', 'Relu', 'Reshape', 'Shape', 'Slice', 'Softmax', 'Transpose', 'Unsqueeze']",68266
+residual,vit_2023,pgd_2_3_16.onnx,"['Add', 'BatchNormalization', 'Concat', 'Constant', 'ConstantOfShape', 'Conv', 'Gather', 'Gemm', 'MatMul', 'Mul', 'ReduceMean', 'Relu', 'Reshape', 'Shape', 'Slice', 'Softmax', 'Transpose', 'Unsqueeze']",76186
+residual,yolo_2023,TinyYOLO.onnx,"['Add', 'AveragePool', 'Conv', 'Flatten', 'Pad', 'Relu']",92093
