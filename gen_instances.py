@@ -250,5 +250,7 @@ if __name__ == '__main__':
                 formatted_line = ','.join(fields).replace('\\', '/').replace('\n', '')
                 output_file.write(formatted_line + '\n')
                 n_of_properties += 1
+            if n_of_properties == 0:
+                print(f"The net {net['onnx']} with associated instance {i_path} do not have any property! Skipping...")
     # TODO(AndyVale): Add the autocompletion for the arguments in the parser
 
