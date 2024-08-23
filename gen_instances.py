@@ -3,6 +3,14 @@ import ast
 import os
 import random
 import pandas as pd
+import onnx
+
+# Constants lists TODO(AndyVale): Use the constants in arguments completion
+ARCHITECTURES = ['convolutional', 'fullyconnected', 'residual']
+ONNX_NODES = sorted([schema.name.lower() for schema in onnx.defs.get_all_schemas()]) # Get all the ONNX nodes and convert them to lowercase
+BENCHMARKS = sorted(set(net.lower() for path in ['fullyconnected_benchmarks_vnncomp', 'convolutional_benchmarks_vnncomp', 'residual_benchmarks_vnncomp'] 
+                        for net in os.listdir(path) if os.path.isdir(os.path.join(path, net))))# Get all the benchmarks and convert them to lowercase
+
 def init_parser() -> argparse.ArgumentParser:
     '''Initializes the parser with the desired arguments'''
     parser = argparse.ArgumentParser(
@@ -34,12 +42,12 @@ Generates a file containing networks that are NOT from the 'fullyconnected' arch
 Generates a file containing networks that are from the 'residual' or 'fullyconnected' architectures, are NOT from the 'cifar10' or 'acasxu_2023' benchmarks and will be saved in the current directory as 'instances.csv'.
     """
     )
-    parser.add_argument('--exnode', '-en', type=str, required=False, help="List of nodes that must be excluded from the dataset")
-    parser.add_argument('--exbench', '-eb', type=str, required=False, help="List of benchmarks that must be excluded from the dataset")
-    parser.add_argument('--exarc', '-ea', type=str, required=False, help="List of architectures that must be excluded from the dataset")
     parser.add_argument('--innode', '-in', type=str, required=False, help="List of nodes that must be included in the dataset")
     parser.add_argument('--inbench', '-ib', type=str, required=False, help="List of benchmarks that must be included in the dataset")
     parser.add_argument('--inarc', '-ia', type=str, required=False, help="List of architectures that must be included in the dataset")
+    parser.add_argument('--exnode', '-en', type=str, required=False, help="List of nodes that must be excluded from the dataset. Use 'all' or '*' to exclude all nodes that are not in the 'innode' list")
+    parser.add_argument('--exbench', '-eb', type=str, required=False, help="List of benchmarks that must be excluded from the dataset. Use 'all' or '*' to exclude all benchmarks that are not in the 'inbench' list")
+    parser.add_argument('--exarc', '-ea', type=str, required=False, help="List of architectures that must be excluded from the dataset")
     parser.add_argument('-max_par', '-Mp', type=int, required=False, default=-1, help="Maximum number of parameters for network")
     parser.add_argument('-min_par', '-mp', type=int, required=False, default=-1, help="Minimum number of parameters for network")
     parser.add_argument('--outdir', '-od', type=str, required=False, default="./", help="Path to the desired output directory, default is the current directory")
@@ -59,15 +67,6 @@ def get_args_as_dict(parser) -> dict:
     dict_args['outdir'] = os.path.abspath(dict_args['outdir'])
     dict_args['outname'] = os.path.join(dict_args['outdir'], dict_args['outname'])
     # Split the strings and remove the whitespaces and cast them to lowercase
-    if dict_args['exnode']:
-        dict_args['exnode'] = dict_args['exnode'].split(",")
-        dict_args['exnode'] = [dict_args['exnode'][i].strip().lower()  for i in range(len(dict_args['exnode']))]
-    if dict_args['exbench']:
-        dict_args['exbench'] = dict_args['exbench'].split(",")
-        dict_args['exbench'] = [dict_args['exbench'][i].strip().lower()  for i in range(len(dict_args['exbench']))]
-    if dict_args['exarc']:
-        dict_args['exarc'] = dict_args['exarc'].split(",")
-        dict_args['exarc'] = [dict_args['exarc'][i].strip().lower()  for i in range(len(dict_args['exarc']))]
 
     if dict_args['innode']:
         dict_args['innode'] = dict_args['innode'].split(",")
@@ -78,6 +77,24 @@ def get_args_as_dict(parser) -> dict:
     if dict_args['inarc']:
         dict_args['inarc'] = dict_args['inarc'].split(",")
         dict_args['inarc'] = [dict_args['inarc'][i].strip().lower()  for i in range(len(dict_args['inarc']))]
+
+    if dict_args['exnode']:
+        # With 'all' (*) keyword, the script will exclude all the nodes that are not in the 'innode' list
+        if(dict_args['exnode'].lower() == 'all' or dict_args['exnode'] == '*'):
+            dict_args['exnode'] = list(set(ONNX_NODES) - set(dict_args['innode']))# With 'all' keyword, the script will exclude all the nodes that are not in the 'innode' list
+        else:
+            dict_args['exnode'] = dict_args['exnode'].split(",")
+            dict_args['exnode'] = [dict_args['exnode'][i].strip().lower()  for i in range(len(dict_args['exnode']))]
+    if dict_args['exbench']:
+        # With 'all' (*) keyword, the script will exclude all the benchmarks that are not in the 'inbench' list
+        if(dict_args['exbench'].lower() == 'all' or dict_args['exbench'] == '*'):
+            dict_args['exbench'] = list(set(BENCHMARKS) - set(dict_args['inbench']))
+        else:
+            dict_args['exbench'] = dict_args['exbench'].split(",")
+            dict_args['exbench'] = [dict_args['exbench'][i].strip().lower()  for i in range(len(dict_args['exbench']))]
+    if dict_args['exarc']:
+        dict_args['exarc'] = dict_args['exarc'].split(",")
+        dict_args['exarc'] = [dict_args['exarc'][i].strip().lower()  for i in range(len(dict_args['exarc']))]
 
     # Cast the 'max_par' and 'min_par' is not needed since they are already in the correct datatype
 
@@ -97,7 +114,7 @@ def keep_generalized(df: pd.DataFrame, lst: list, col_name: str) -> pd.DataFrame
     '''Keep only the rows in the DataFrame where the values in col_name are in lst'''
     if check_emptiness(df, lst, col_name.capitalize(), False):
         return df
-    print(f"\tKeeping only {col_name.lower()} in: ", lst)
+    print(f"\tKeeping only models with {col_name.lower()} in: ", lst)
     
     if col_name == 'node_types':
         mask = df[col_name].apply(lambda v: all(node in v for node in lst))
@@ -110,7 +127,7 @@ def remove_generalized(df: pd.DataFrame, lst: list, col_name: str) -> pd.DataFra
     '''Remove the rows in the DataFrame where the values in col_name are in lst'''
     if check_emptiness(df, lst, col_name.capitalize(), True):
         return df
-    print(f"\tRemoving {col_name.lower()} in: ", lst)
+    print(f"\tRemoving models with {col_name.lower()} in: ", lst)
     
     if col_name == 'node_types':
         mask = df[col_name].apply(lambda v: not any(node in v for node in lst))
@@ -251,6 +268,6 @@ if __name__ == '__main__':
                 output_file.write(formatted_line + '\n')
                 n_of_properties += 1
             if n_of_properties == 0:
-                print(f"The net {net['onnx']} with associated instance {i_path} do not have any property! Skipping...")
+                print(f"{n_of_properties} for {net['onnx']} in {i_path}")
     # TODO(AndyVale): Add the autocompletion for the arguments in the parser
-
+    
