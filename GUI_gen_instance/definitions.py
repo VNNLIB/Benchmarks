@@ -5,7 +5,6 @@ import pandas as pd
 import onnx
 
 BENCHMARKS_VNNCOMP_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-print(BENCHMARKS_VNNCOMP_DIR)
 FULLYCONNECTED_BENCHMARKS_VNNCOMP_DIR = os.path.join(BENCHMARKS_VNNCOMP_DIR, 'fullyconnected_benchmarks_vnncomp')
 CONVOLUTIONAL_BENCHMARKS_VNNCOMP_DIR = os.path.join(BENCHMARKS_VNNCOMP_DIR, 'convolutional_benchmarks_vnncomp')
 RESIDUAL_BENCHMARKS_VNNCOMP_DIR = os.path.join(BENCHMARKS_VNNCOMP_DIR, 'residual_benchmarks_vnncomp')
@@ -115,7 +114,7 @@ def load_nns_dataframe(file_path: str) -> pd.DataFrame:
 
 def get_instances_path(ser: pd.Series) -> str:
     '''Convert the series to "instances.csv" file's path in the associated repository with the parametr, this can be done looking at architecture and benchmark columns'''
-    path = ''
+    path = BENCHMARKS_VNNCOMP_DIR
     if ser.empty:
         raise ValueError('Series is empty')
 
