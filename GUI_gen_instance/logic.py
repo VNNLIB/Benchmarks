@@ -10,8 +10,11 @@ class logic():
     def __init__(self, 
                  path_to_input_dataset = NEURAL_NETWORKS_FILE,
                  path_to_input_instances= BENCHMARKS_VNNCOMP_DIR,
-                 path_to_output_instances = os.path.join(BENCHMARKS_VNNCOMP_DIR, 'instances.csv')
+                 path_to_output_instances = os.path.join(BENCHMARKS_VNNCOMP_DIR, 'instances.csv'),
+                 help_url = GITHUB_REPO
                  ):
+        
+        self.help_url = help_url
         self.path_to_dataset = path_to_input_dataset
         self.path_to_input_instances = path_to_input_instances
         self.path_to_output_instances = path_to_output_instances
@@ -25,6 +28,11 @@ class logic():
         self.max_params = -1
         self.min_params = -1
     
+    def reset_options(self):
+        self.path_to_dataset = NEURAL_NETWORKS_FILE
+        self.path_to_input_instances = BENCHMARKS_VNNCOMP_DIR
+        self.path_to_output_instances = os.path.join(BENCHMARKS_VNNCOMP_DIR, 'instances.csv')
+
     def prova(self):
         print(f'Filters are: {self.included_nodes}, {self.excluded_nodes}, {self.included_architectures}, {self.max_params}, {self.min_params}')
         self.reset_filters()
@@ -38,7 +46,7 @@ class logic():
         for i, row in self.dataframe.iterrows():
             #dictionaries.append({'onnx': row['onnx'].replace('.onnx',''), 'architecture': row['architecture'], 'benchmark': row['benchmark'], 'n_params': row['n_params'], 'node_types': row['node_types']})
             dictionaries.append([row['onnx'].replace('.onnx',''), row['architecture'], row['benchmark'], row['n_params'], ", ".join(row['node_types'])])
-        print(f"Benckmarks sample: {dictionaries}")
+        #print(f"Benckmarks sample: {dictionaries}")
         return dictionaries
     
     def reset_filters(self):
@@ -65,7 +73,6 @@ class logic():
     def write_output_instances(self):
         with open(self.path_to_output_instances, 'w') as file:
             for instance in self.calculated_instances:
-                print(instance)
                 file.write(instance['onnx'] + ',' + instance['vnnlib'] + ',' + instance['timeout']) if instance['timeout'] else file.write(instance['onnx'] + ',' + instance['vnnlib'])
 
 #def get_benchmarks_sample():

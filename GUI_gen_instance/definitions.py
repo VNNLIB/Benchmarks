@@ -4,6 +4,7 @@ import random
 import pandas as pd
 import onnx
 
+GITHUB_REPO = "https://github.com/AndyVale/benchmarks_vnncomp"
 BENCHMARKS_VNNCOMP_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 FULLYCONNECTED_BENCHMARKS_VNNCOMP_DIR = os.path.join(BENCHMARKS_VNNCOMP_DIR, 'fullyconnected_benchmarks_vnncomp')
 CONVOLUTIONAL_BENCHMARKS_VNNCOMP_DIR = os.path.join(BENCHMARKS_VNNCOMP_DIR, 'convolutional_benchmarks_vnncomp')

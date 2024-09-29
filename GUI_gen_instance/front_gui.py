@@ -19,12 +19,9 @@ class BenchmarkScrollFrame(ctk.CTkFrame):
         self.updateTabview()
 
     def loadClickedTab(self):
-        print("CALLED")
         id_tab = int(self.table_tabview.get().replace("Tab ", "").strip())
         if self.list_cached_tabs[id_tab]:
-            print(f"Tab {id_tab} already cached")
             return
-        print(f"Loading tab {id_tab}")
 
         self.list_cached_tabs[id_tab] = True
         lower_bound = id_tab*20

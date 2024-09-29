@@ -15,8 +15,6 @@ class ArchitectureFilterFrame(ctk.CTkFrame):
 
     def checkInteraction(self, *params):
         # If all the checkboxes are unchecked, check them all (to match the logic.py behavior)
-        
-        print(f"Changed to {self.isFullyConnectedIncluded.get()} {self.isConvolutionalIncluded.get()} {self.isResidualIncluded.get()}")
         included_architectures = []
         if self.isFullyConnectedIncluded.get():
             included_architectures.append('fullyconnected')
@@ -152,13 +150,13 @@ class AddNodesFilterFrame(ctk.CTkFrame):
         self.createWidgets()
 
     def exclusionCheckboxInteraction(self, *params):
-        print(f"Exclusion checkbox changed to {self.exclusionVar.get()}")
+        #print(f"Exclusion checkbox changed to {self.exclusionVar.get()}")
         if self.exclusionVar.get():
             self.winfo_toplevel().logic_instance.excluded_nodes.append("all")
         else:
             while "all" in self.winfo_toplevel().logic_instance.excluded_nodes:
                 self.winfo_toplevel().logic_instance.excluded_nodes.remove("all")
-        print(f"Excluded nodes: {self.winfo_toplevel().logic_instance.excluded_nodes}")
+        #print(f"Excluded nodes: {self.winfo_toplevel().logic_instance.excluded_nodes}")
         self.winfo_toplevel().mainFrame.benchmarkScrollFrame.updateTabview()
 
     def insert_method(self, e, entry):
