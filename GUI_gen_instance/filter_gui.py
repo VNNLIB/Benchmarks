@@ -1,3 +1,4 @@
+from typing import Any, Tuple
 import customtkinter as ctk
 from CTkScrollableDropdown import CTkScrollableDropdown
 
@@ -270,3 +271,56 @@ class FilterScrollFrame(ctk.CTkScrollableFrame):
         self.nodesFilterFrame.pack(side="top", fill="x")
         self.removeNodesFilterFrame = RemoveNodesFilterFrame(self)
         self.removeNodesFilterFrame.pack(side="top", fill="x")
+        self.originFilterFrame = OriginFilterFrame(self)
+        self.originFilterFrame.pack(side="top", fill="x")
+
+class OriginFilterFrame(ctk.CTkFrame):
+    '''Frame containing the widgets to filter the networks by their origin benchmark (e.g. select only benchmarks from cifar100, acasxu, etc)'''
+    def __init__(self, master, *args, **kwargs):
+        ctk.CTkFrame.__init__(self, master, *args, **kwargs, border_color="#000000", border_width=2)
+        self.columnconfigure(0, weight=1)
+        self.rowconfigure(0, weight=1)
+        self.originNames = []
+        self.originVars = []
+        self.createWidgets()
+
+    def interaction(self, id):
+        if(id == -1):
+            for i in range(len(self.originVars)):
+                self.originVars[i].set(not self.originVars[id].get())
+                #self.interaction(i)
+            self.winfo_toplevel().mainFrame.benchmarkScrollFrame.updateTabview()
+            return
+        print(f"Origin {self.originNames[id]} selected -> {self.originVars[id].get()}")
+        try:
+            if(self.originVars[id].get()):
+                self.winfo_toplevel().logic_instance.incuded_benchmarks.append(self.originNames[id])
+            else:
+                self.winfo_toplevel().logic_instance.incuded_benchmarks.remove(self.originNames[id])
+                print(f"Removed {self.originNames[id]}")
+        except:
+            print("Error in the origin filter interaction :/")
+
+    def createCell(self, row:int, column:int, name:str):
+        self.originVars.append(ctk.BooleanVar(value=True))
+        self.originVars[-1].trace_add('write', lambda *args: self.interaction(row + column))
+        self.originNames.append(name)
+        cellbox = ctk.CTkCheckBox(self.originFrame, text=name, variable=self.originVars[-1], font=("Arial", 10), command=lambda: self.winfo_toplevel().mainFrame.benchmarkScrollFrame.updateTabview())
+        cellbox.grid(row=row, column=column, pady=2, padx=2, sticky='ew')
+    
+    def createWidgets(self):
+        self.originLabel = ctk.CTkLabel(self, text="Origin:", font=("Arial", 14, "bold"))
+        self.originLabel.grid(row=0, column=0, pady=2, padx=2)
+        all_origins = sorted(self.winfo_toplevel().logic_instance.possible_origins)
+
+        all_var = ctk.BooleanVar(value=True)
+        all_checkbox = ctk.CTkCheckBox(self, text="All", font=("Arial", 10), variable=all_var, command=lambda: self.interaction(-1))
+        all_checkbox.grid(row=1, column=0, pady=2, padx=2, sticky='ew')
+
+        self.originFrame = ctk.CTkFrame(self)
+        self.originFrame.grid(row=2, column=0, pady=2, padx=2)
+        self.originFrame.columnconfigure(0, weight=1)
+        self.originFrame.columnconfigure(1, weight=1)
+
+        for i, origin in enumerate(all_origins):
+            self.createCell(i-i%2, i%2, origin)
