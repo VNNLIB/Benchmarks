@@ -36,11 +36,30 @@ class logic():
         self.path_to_input_instances = BENCHMARKS_VNNCOMP_DIR
         self.path_to_output_instances = os.path.join(BENCHMARKS_VNNCOMP_DIR, 'instances.csv')
 
+    def write_output_file(self, output_file_path, network_tuples: list) -> None:
+        '''Writes the list of network tuples to the output file in the format 'rel_path_to_onnx,rel_path_to_property.vnnlib,timeout(not mandatory)' '''
+        # Remove the output file if it already exists
+        if(os.path.isfile(output_file_path)):
+            #verbose_print(f"Removing the existing output file {output_file_path}")
+            os.remove(output_file_path)
+
+        # if the outdir does not exist, create it
+        if not os.path.exists(os.path.dirname(output_file_path)):
+            #verbose_print(f"Creating the output directory {dict_args['outdir']}")
+            os.makedirs(os.path.dirname(output_file_path))
+        # Finally write the filtered instances to the output file
+        path_to_output_folder = os.path.dirname(self.path_to_output_instances)
+        with open(output_file_path, 'w') as output_file:
+            for net_tuple in network_tuples:
+                row = [os.path.relpath(net_tuple['rel_path_to_onnx'], start=path_to_output_folder), os.path.relpath(net_tuple['rel_path_to_property.vnnlib'], start=path_to_output_folder), net_tuple['timeout']] if net_tuple['timeout'] else [net_tuple['rel_path_to_onnx'], net_tuple['rel_path_to_property.vnnlib']]
+                csv_line = ','.join(row).replace('\\', '/').replace('\n', '')
+                output_file.write(csv_line + '\n')
+
     def prova(self):
         print(f'Filters are: {self.included_nodes}, {self.excluded_nodes}, {self.included_architectures}, {self.max_params}, {self.min_params}')
         self.reset_filters()
         self.get_filtered_instances(self.included_architectures, self.incuded_benchmarks, self.included_nodes, self.excluded_nodes, self.min_params, self.max_params)
-        self.write_output_instances()
+        self.write_output_file(self.path_to_output_instances, self.calculated_instances)
 
     def get_benchmarks_sample(self):
         self.reset_filters()
