@@ -1,12 +1,16 @@
-# benchmarks_vnncomp
+# VNNLIB benchmarks
 
-This repository provides a reorganized collection of benchmarks from VNNCOMP, starting from 2022. The benchmarks are categorized into three distinct architectures: fully connected, convolutional, and residual networks. Each category is managed as a Git submodule, allowing you to selectively download individual categories or all of them together.
+This repository provides a reorganized collection of benchmarks from the VNNCOMP, starting from 2022. The benchmarks are categorized into three distinct architectures: fully connected, convolutional, and residual networks. Each category is managed as a Git submodule, allowing you to selectively download individual categories or all of them together.
 In this repository, you can also find:
   * 'extract_compress_files_python.py': A script for extracting .gz files and compressing .onnx and .vnnlib files.
   * 'extract_files_windows.bat: A batch file for extracting .gz files on Windows.
   * 'gen_instance.py: A script for generating a custom instances.csv file based on the provided arguments. This allows you to create a personalized benchmark tailored to your needs, such as focusing on a specific architecture or a particular layer.
   * nns.csv: A CSV file used by gen_instance.py.
   * expected_results.csv: A CSV file that provides a list of expected results for instances specified by {model.onnx, property.vnnlib}. These results are sourced from VNNCOMP results for the years 2022, 2023, and 2024.
+
+## Credits
+
+This repository is the result of the work of [Andrea Valentino Ricotti](https://github.com/andyvale) with the University of Genova
 
 ## Download architectures
 

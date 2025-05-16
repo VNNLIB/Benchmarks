@@ -4,11 +4,11 @@ import random
 import pandas as pd
 import onnx
 
-GITHUB_REPO = "https://github.com/AndyVale/benchmarks_vnncomp"
+GITHUB_REPO = "https://github.com/VNNLIB/Benchmarks"
 BENCHMARKS_VNNCOMP_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-FULLYCONNECTED_BENCHMARKS_VNNCOMP_DIR = os.path.join(BENCHMARKS_VNNCOMP_DIR, 'fullyconnected_benchmarks_vnncomp')
-CONVOLUTIONAL_BENCHMARKS_VNNCOMP_DIR = os.path.join(BENCHMARKS_VNNCOMP_DIR, 'convolutional_benchmarks_vnncomp')
-RESIDUAL_BENCHMARKS_VNNCOMP_DIR = os.path.join(BENCHMARKS_VNNCOMP_DIR, 'residual_benchmarks_vnncomp')
+FULLYCONNECTED_BENCHMARKS_VNNCOMP_DIR = os.path.join(BENCHMARKS_VNNCOMP_DIR, 'Benchmarks_fc')
+CONVOLUTIONAL_BENCHMARKS_VNNCOMP_DIR = os.path.join(BENCHMARKS_VNNCOMP_DIR, 'Benchmarks_conv')
+RESIDUAL_BENCHMARKS_VNNCOMP_DIR = os.path.join(BENCHMARKS_VNNCOMP_DIR, 'Benchmarks_residual')
 EXPECTED_RESULTS_FILE = os.path.join(BENCHMARKS_VNNCOMP_DIR, 'expected_results.csv')
 NEURAL_NETWORKS_FILE = os.path.join(BENCHMARKS_VNNCOMP_DIR, 'nns.csv')
 DEBUG_FILE = os.path.join(BENCHMARKS_VNNCOMP_DIR, 'filtered_nns.csv')
