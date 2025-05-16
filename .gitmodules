@@ -1,9 +1,9 @@
-[submodule "Benchmarks_conv"]
-	path = Benchmarks_conv
-	url = https://github.com/VNNLIB/Benchmarks_conv.git
 [submodule "Benchmarks_fc"]
 	path = Benchmarks_fc
 	url = https://github.com/VNNLIB/Benchmarks_fc.git
+[submodule "Benchmarks_conv"]
+	path = Benchmarks_conv
+	url = https://github.com/vnnlib/Benchmarks_conv
 [submodule "Benchmarks_residual"]
 	path = Benchmarks_residual
-	url = https://github.com/VNNLIB/Benchmarks_residual.git
+	url = https://github.com/vnnlib/Benchmarks_residual
