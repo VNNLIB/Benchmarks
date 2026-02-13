@@ -236,7 +236,7 @@ def update_vnnlib(
                         "(declare-network N",
                         f"    (declare-input  X {input_dtype} {input_shape})",
                         f"    (declare-output Y {output_dtype} {output_shape})",
-                        ")",
+                        ")\n",
                     ]
                 )
             )
