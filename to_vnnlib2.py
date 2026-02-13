@@ -223,7 +223,6 @@ def update_vnnlib(
         elif (spec_gz_path := (spec_path.parent / f"{spec_path.name}.gz")).exists():
             open_func_r = partial(gzip.open, spec_gz_path, mode="rt")
             open_func_w = partial(gzip.open, f.name, mode="wt")
-            # open_func_w = partial(open, f.name, mode="w")
             spec_path = spec_gz_path
         else:
             raise RuntimeError(f"spec not found: {spec_path}")
@@ -262,7 +261,6 @@ def update_vnnlib(
                         chunk = ""
             assert len(chunk) == 0
         shutil.copyfile(f.name, spec_path)
-        # shutil.copyfile(f.name, "test.vnnlib")
 
     # check that the updated spec is parseable
     # doesn't work if file is compressed, so skip in that case
