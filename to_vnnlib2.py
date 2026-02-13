@@ -219,7 +219,7 @@ def update_vnnlib(
         # read in the original vnnlib v1.0 spec
         if spec_path.exists():
             open_func_r = partial(open, spec_path, mode="r")
-            open_func_w = partial(open, f, mode="w")
+            open_func_w = partial(open, f.name, mode="w")
         elif (spec_gz_path := (spec_path.parent / f"{spec_path.name}.gz")).exists():
             open_func_r = partial(gzip.open, spec_gz_path, mode="rt")
             open_func_w = partial(gzip.open, f.name, mode="wt")
